@@ -2,7 +2,11 @@
 
 一个纯静态的 LLM Token 成本计算器，部署后可通过 `https://c8.fit/cost` 访问。
 
-当前实现由 GitHub Actions 定时从 OpenRouter 公共 Models API 拉取价格并更新仓库内的 `cost/pricing.json`，页面只读取本地静态快照。
+当前实现支持两种更新方式：
+- 自动：GitHub Actions 定时从 OpenRouter 公共 Models API 拉取价格并更新仓库内的 `cost/pricing.json`
+- 手动：本地执行更新脚本后提交仓库
+
+页面本身只读取本地静态快照，不会在用户访问时请求远端价格接口。
 
 ## 目录结构
 
@@ -76,6 +80,21 @@ npm run update:pricing
 - 脚本位于 `scripts/update-pricing.js`
 - GitHub Actions 会在每天定时和手动触发时更新 `cost/pricing.json`
 - 若价格快照发生变化，workflow 会自动提交回仓库
+
+## 手动更新价格
+
+如果当前仓库无法启用 GitHub Actions，可以直接本地执行：
+
+```bash
+npm run refresh:pricing
+git add cost/pricing.json
+git commit -m "chore: refresh pricing snapshot"
+git push
+```
+
+- `npm run refresh:pricing` 会先更新快照，再显示 `cost/pricing.json` 的变更状态
+- 页面部署后依然只读取仓库里的静态 `pricing.json`
+- 即使没有 Actions，这套流程也能正常维护线上价格数据
 
 ## 后续维护建议
 

@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "npx serve .",
-    "update:pricing": "node scripts/update-pricing.js"
+    "update:pricing": "node scripts/update-pricing.js",
+    "refresh:pricing": "npm run update:pricing && git status --short cost/pricing.json"
   }
 }
