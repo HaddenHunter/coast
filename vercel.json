@@ -1,0 +1,17 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "version": 2,
+  "routes": [
+    { "src": "/cost$", "dest": "/cost/index.html" },
+    { "src": "/cost/pricing.json$", "dest": "/cost/pricing.json" },
+    { "src": "/(.*)", "dest": "/cost/index.html" }
+  ],
+  "headers": [
+    {
+      "source": "/cost/pricing.json",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=3600" }
+      ]
+    }
+  ]
+}

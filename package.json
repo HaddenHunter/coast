@@ -1,0 +1,8 @@
+{
+  "name": "c8-fit-cost",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "npx serve ."
+  }
+}
