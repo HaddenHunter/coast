@@ -255,21 +255,7 @@
     const CHARS_PER_TOK = 4;
     const COT_PATTERN = /r1|opus|sonnet|o[0-9]|reason|think/i;
     const BATCH_SUPPORTED_PATTERN = /openai|anthropic|gemini|google/i;
-    const REMOTE_PRICING_URL = "https://openrouter.ai/api/v1/models?sort=pricing-low-to-high";
-    const FALLBACK_PRICING_URL = "./pricing.json";
-    const PROVIDER_LABELS = {
-      anthropic: "Anthropic",
-      cerebras: "Cerebras",
-      deepseek: "DeepSeek",
-      google: "Google",
-      groq: "Groq",
-      meta: "Meta",
-      mistralai: "Mistral",
-      openai: "OpenAI",
-      qwen: "Qwen",
-      xai: "xAI",
-      zai: "Z.ai"
-    };
+    const PRICING_URL = "./pricing.json";
 
     function estTokens(text) {
       const normalized = (text || "").trim();
@@ -288,96 +274,20 @@
       return "$" + value.toFixed(digits);
     }
 
-    function normalizeContextLength(value) {
-      const num = Number(value) || 0;
-      if (num >= 1000000) {
-        return (num / 1000000).toFixed(num % 1000000 === 0 ? 0 : 1) + "M";
-      }
-      if (num >= 1000) {
-        return Math.round(num / 1000) + "K";
-      }
-      return String(num || "-");
-    }
-
-    function inferProvider(model) {
-      const id = model.id || "";
-      const slashIndex = id.indexOf("/");
-      const raw = slashIndex > 0 ? id.slice(0, slashIndex) : "";
-      const provider = raw || model.provider || "Unknown";
-      if (PROVIDER_LABELS[provider]) {
-        return PROVIDER_LABELS[provider];
-      }
-      return provider
-        .replace(/\b\w/g, function (letter) {
-          return letter.toUpperCase();
-        })
-        .replace(/-/g, " ");
-    }
-
-    function normalizeRemoteModels(payload) {
-      return {
-        updated: new Date().toISOString().slice(0, 10),
-        source: "OpenRouter Public Models API",
-        sourceUrl: REMOTE_PRICING_URL,
-        models: (payload.data || [])
-          .filter(function (model) {
-            const modality = model.architecture && model.architecture.modality;
-            return !modality || /text/.test(modality);
-          })
-          .map(function (model) {
-            const promptPrice = Number(model.pricing && model.pricing.prompt) || 0;
-            const completionPrice = Number(model.pricing && model.pricing.completion) || 0;
-            const cachedPrice = Number(model.pricing && model.pricing.input_cache_read);
-            return {
-              id: model.id,
-              provider: inferProvider(model),
-              input: promptPrice * 1e6,
-              output: completionPrice * 1e6,
-              cached: Number.isFinite(cachedPrice) ? cachedPrice * 1e6 : promptPrice * 1e6,
-              ctx: normalizeContextLength(model.context_length || (model.top_provider && model.top_provider.context_length)),
-              free: promptPrice === 0 && completionPrice === 0,
-              limit: null
-            };
-          })
-      };
-    }
-
-    function normalizeFallbackModels(payload) {
-      return {
-        updated: payload.updated || "--",
-        source: "本地 fallback 快照",
-        sourceUrl: FALLBACK_PRICING_URL,
-        models: payload.models || []
-      };
-    }
-
     function loadPricing() {
-      return fetch(REMOTE_PRICING_URL)
+      return fetch(PRICING_URL)
         .then(function (response) {
           if (!response.ok) {
-            throw new Error("remote HTTP " + response.status);
+            throw new Error("HTTP " + response.status);
           }
           return response.json();
-        })
-        .then(function (payload) {
-          const normalized = normalizeRemoteModels(payload);
-          if (!normalized.models.length) {
-            throw new Error("remote empty");
-          }
-          normalized.isFallback = false;
-          return normalized;
-        })
-        .catch(function () {
-          return fetch(FALLBACK_PRICING_URL).then(function (response) {
-            if (!response.ok) {
-              throw new Error("fallback HTTP " + response.status);
-            }
-            return response.json();
-          }).then(function (payload) {
-            const normalized = normalizeFallbackModels(payload);
-            normalized.isFallback = true;
-            return normalized;
-          });
+        }).then(function (payload) {
+          return {
+            updated: payload.updated || "--",
+            source: payload.source || "本地 pricing.json",
+            sourceUrl: payload.sourceUrl || "",
+            models: payload.models || []
+          };
         });
     }
 
@@ -496,9 +406,7 @@
             warnings.push(batchSupported ? "已按 Batch -50% 估算" : "当前模型通常不支持 Batch -50%，本次未应用折扣");
           }
           warnings.push("中文按 4 chars/tok 偏保守，真实 token 数通常更低，金额倾向高估");
-          if (data.isFallback) {
-            warnings.push("远端价格源暂不可用，当前使用仓库内快照数据");
-          }
+          warnings.push("价格快照由 GitHub Actions 定时更新，页面本身不请求远端价格接口");
           warnings.push("价格仅供估算，使用前请以各家官网 pricing 页为准");
           warnEl.textContent = "⚠ " + warnings.join(" · ");
         }
@@ -518,7 +426,7 @@
       })
       .catch(function (error) {
         document.getElementById("result").textContent = "定价数据加载失败：" + error.message;
-        document.getElementById("warn").textContent = "⚠ 请确认远端接口可访问，或当前静态目录中存在 cost/pricing.json 作为兜底数据。";
+        document.getElementById("warn").textContent = "⚠ 请确认当前静态目录中存在 cost/pricing.json，且构建产物已包含最新价格快照。";
       });
   </script>
 </body>

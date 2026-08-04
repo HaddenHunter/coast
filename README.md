@@ -2,7 +2,7 @@
 
 一个纯静态的 LLM Token 成本计算器，部署后可通过 `https://c8.fit/cost` 访问。
 
-当前实现优先从 OpenRouter 公共 Models API 拉取实时价格与上下文窗口；若远端不可用，则自动回退到仓库内的 `cost/pricing.json` 全量快照。
+当前实现由 GitHub Actions 定时从 OpenRouter 公共 Models API 拉取价格并更新仓库内的 `cost/pricing.json`，页面只读取本地静态快照。
 
 ## 目录结构
 
@@ -62,12 +62,21 @@ vercel --prod
 ## 说明
 
 - 页面优先使用 `https://openrouter.ai/api/v1/models` 作为公开价格源，无需 API key
-- `cost/pricing.json` 作为远端失败时的兜底全量快照，覆盖当前公开文本模型目录
+- `cost/pricing.json` 由 workflow 自动更新，页面访问时不会再请求远端价格接口
 - 页面所有计算都在前端本地完成，不上传 prompt 内容
 - 免费层只作为提示，不代表允许转售 key 或商业中转
 - 中文 token 数通常低于 `4 chars / token`，所以页面金额估算偏保守
 
+## 自动更新价格
+
+```bash
+npm run update:pricing
+```
+
+- 脚本位于 `scripts/update-pricing.js`
+- GitHub Actions 会在每天定时和手动触发时更新 `cost/pricing.json`
+- 若价格快照发生变化，workflow 会自动提交回仓库
+
 ## 后续维护建议
 
-- 如果希望完全避免前端依赖外部接口，可以后续增加 GitHub Actions，定期同步公开价格目录并自动发 PR
 - 如果根域名 `c8.fit` 未来要作为首页使用，可删掉 `vercel.json` 中最后一条全量回退路由，仅保留 `/cost`

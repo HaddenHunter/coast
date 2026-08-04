@@ -1,5 +1,5 @@
 {
-  "_note": "本文件为本地 fallback 快照。页面优先使用 OpenRouter 公共 Models API 获取实时价格；仅在远端不可用时回退到这里。该快照覆盖 OpenRouter 当前公开文本模型目录。",
+  "_note": "本文件由 GitHub Actions 自动更新。页面只读取本地 pricing.json，不在用户访问时请求远端价格接口。数据源为 OpenRouter 公共 Models API，使用前仍建议核对官网。",
   "updated": "2026-08-04",
   "source": "OpenRouter Public Models API",
   "sourceUrl": "https://openrouter.ai/api/v1/models?sort=pricing-low-to-high",

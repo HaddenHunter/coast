@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "npx serve ."
+    "dev": "npx serve .",
+    "update:pricing": "node scripts/update-pricing.js"
   }
 }
