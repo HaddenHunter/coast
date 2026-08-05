@@ -13,19 +13,43 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - name: Clone repository
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH_NAME: ${{ github.ref_name }}
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+        run: |
+          set -eu
+          BRANCH="${BRANCH_NAME:-$DEFAULT_BRANCH}"
+          git clone --depth=1 --branch "$BRANCH" "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" repo
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
+      - name: Check runtime
+        run: |
+          set -eu
+          cd repo
+          node --version
+          npm --version
 
       - name: Update pricing snapshot
-        run: npm run update:pricing
+        run: |
+          set -eu
+          cd repo
+          npm run update:pricing
 
-      - name: Commit updated snapshot
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: "chore: refresh pricing snapshot"
-          file_pattern: cost/pricing.json
+      - name: Commit and push snapshot
+        env:
+          BRANCH_NAME: ${{ github.ref_name }}
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+        run: |
+          set -eu
+          cd repo
+          BRANCH="${BRANCH_NAME:-$DEFAULT_BRANCH}"
+          if git diff --quiet -- cost/pricing.json; then
+            echo "No pricing changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add cost/pricing.json
+          git commit -m "chore: refresh pricing snapshot"
+          git push origin "HEAD:${BRANCH}"
