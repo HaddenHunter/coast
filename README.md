@@ -1,6 +1,6 @@
-# c8-fit-cost
+# c8-fit-coast
 
-一个纯静态的 LLM Token 成本计算器，部署后可通过 `https://c8.fit/cost` 访问。
+一个纯静态站点：根域名首页用于品牌展示，LLM Token 成本计算器部署后通过 `https://www.c8.fit/coast` 访问。
 
 当前实现支持两种更新方式：
 - 自动：GitHub Actions 定时从 OpenRouter 公共 Models API 拉取价格并更新仓库内的 `cost/pricing.json`
@@ -39,7 +39,7 @@ npm run dev
 ```bash
 git init
 git add .
-git commit -m "c8.fit/cost LLM pricing calculator"
+git commit -m "Add Coast static site and calculator"
 gh repo create c8-fit-cost --public --source=. --push
 ```
 
@@ -59,9 +59,11 @@ vercel --prod
 
 1. 打开 Vercel 项目设置
 2. 进入 `Settings -> Domains`
-3. 添加域名 `c8.fit`
+3. 添加域名 `www.c8.fit`
 4. 在 DNS 提供商中按 Vercel 提示配置 NS 或 CNAME
-5. 等待 DNS 生效后访问 `https://c8.fit/cost`
+5. 等待 DNS 生效后访问：
+   - 首页：`https://www.c8.fit/`
+   - 计算器：`https://www.c8.fit/coast`
 
 ## 说明
 
@@ -70,6 +72,7 @@ vercel --prod
 - 页面所有计算都在前端本地完成，不上传 prompt 内容
 - 免费层只作为提示，不代表允许转售 key 或商业中转
 - 中文 token 数通常低于 `4 chars / token`，所以页面金额估算偏保守
+- 根路径 `/` 为科技风首页，计算器入口位于 `/coast`
 
 ## 自动更新价格
 
@@ -98,4 +101,4 @@ git push
 
 ## 后续维护建议
 
-- 如果根域名 `c8.fit` 未来要作为首页使用，可删掉 `vercel.json` 中最后一条全量回退路由，仅保留 `/cost`
+- 后续若要扩展工具能力，建议继续沿用 `/coast/*` 路径组织，如 `/coast/models`、`/coast/compare`

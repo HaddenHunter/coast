@@ -2,11 +2,20 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "version": 2,
   "routes": [
-    { "src": "/cost$", "dest": "/cost/index.html" },
+    { "src": "/coast/?$", "dest": "/cost/index.html" },
+    { "src": "/coast/pricing.json$", "dest": "/cost/pricing.json" },
+    { "src": "/cost/?$", "dest": "/cost/index.html" },
     { "src": "/cost/pricing.json$", "dest": "/cost/pricing.json" },
-    { "src": "/(.*)", "dest": "/cost/index.html" }
+    { "src": "/$", "dest": "/index.html" },
+    { "src": "/(.*)", "dest": "/index.html" }
   ],
   "headers": [
+    {
+      "source": "/coast/pricing.json",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=3600" }
+      ]
+    },
     {
       "source": "/cost/pricing.json",
       "headers": [
