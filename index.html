@@ -7,19 +7,19 @@
   <meta name="description" content="Interactive panda landing page for www.c8.fit.">
   <style>
     :root {
-      --bg: #02050b;
-      --bg-2: #08111f;
-      --line: rgba(159, 215, 255, 0.18);
-      --line-strong: rgba(159, 215, 255, 0.34);
-      --text: #eef6ff;
-      --muted: rgba(238, 246, 255, 0.76);
+      --bg: #eef3f9;
+      --bg-2: #f7fbff;
+      --line: rgba(37, 71, 112, 0.12);
+      --line-strong: rgba(37, 71, 112, 0.22);
+      --text: #0b1a30;
+      --muted: rgba(11, 26, 48, 0.64);
       --glow-x: 50%;
       --glow-y: 44%;
       --rotate-x: 0deg;
       --rotate-y: 0deg;
       --shift-x: 0px;
       --shift-y: 0px;
-      --shadow: 0 48px 160px rgba(0, 0, 0, 0.62);
+      --shadow: 0 48px 120px rgba(24, 48, 92, 0.18);
     }
 
     * {
@@ -31,8 +31,10 @@
       margin: 0;
       min-height: 100%;
       background:
-        radial-gradient(circle at 50% 16%, rgba(120, 186, 255, 0.22), transparent 22%),
-        radial-gradient(circle at 50% 100%, rgba(72, 110, 255, 0.18), transparent 24%),
+        radial-gradient(circle at 50% 18%, rgba(92, 153, 255, 0.18), transparent 22%),
+        radial-gradient(circle at 50% 86%, rgba(74, 127, 255, 0.12), transparent 28%),
+        radial-gradient(circle at 10% 16%, rgba(149, 225, 255, 0.16), transparent 20%),
+        radial-gradient(circle at 86% 12%, rgba(200, 227, 255, 0.44), transparent 24%),
         linear-gradient(180deg, var(--bg-2) 0%, var(--bg) 100%);
       overflow: hidden;
     }
@@ -49,11 +51,23 @@
       inset: 0;
       pointer-events: none;
       background-image:
-        linear-gradient(rgba(159, 215, 255, 0.05) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(159, 215, 255, 0.05) 1px, transparent 1px);
+        linear-gradient(rgba(45, 78, 119, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(45, 78, 119, 0.05) 1px, transparent 1px);
       background-size: 52px 52px;
       mask-image: radial-gradient(circle at center, black 28%, transparent 72%);
-      opacity: 0.36;
+      opacity: 0.42;
+    }
+
+    body::after {
+      content: "";
+      position: absolute;
+      inset: auto 8% -24% 8%;
+      height: 56%;
+      pointer-events: none;
+      background:
+        radial-gradient(ellipse at center, rgba(41, 86, 140, 0.16) 0%, rgba(41, 86, 140, 0.08) 26%, transparent 66%);
+      filter: blur(18px);
+      z-index: 0;
     }
 
     .page {
@@ -92,19 +106,19 @@
 
     .stage::before {
       background:
-        radial-gradient(circle at var(--glow-x) var(--glow-y), rgba(163, 225, 255, 0.28), transparent 18%),
-        radial-gradient(circle at 50% 64%, rgba(91, 138, 255, 0.22), transparent 28%),
-        linear-gradient(180deg, rgba(8, 15, 28, 0.16), rgba(8, 15, 28, 0.72));
+        radial-gradient(circle at var(--glow-x) var(--glow-y), rgba(164, 213, 255, 0.28), transparent 18%),
+        radial-gradient(circle at 50% 68%, rgba(81, 125, 241, 0.16), transparent 28%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.24), rgba(214, 225, 242, 0.56));
       filter: blur(2px);
     }
 
     .stage::after {
       inset: 5% 7%;
       border: 1px solid var(--line);
-      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.03), var(--shadow);
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.48), var(--shadow);
       background:
-        linear-gradient(135deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.01)),
-        rgba(6, 11, 20, 0.44);
+        linear-gradient(135deg, rgba(255, 255, 255, 0.84), rgba(233, 241, 252, 0.54)),
+        rgba(244, 248, 253, 0.74);
       backdrop-filter: blur(12px);
       transform: translateZ(-10px);
     }
@@ -114,8 +128,8 @@
       inset: 18% 23% 15%;
       border-radius: 50%;
       background:
-        radial-gradient(circle, rgba(164, 226, 255, 0.28), rgba(164, 226, 255, 0.08) 34%, transparent 64%);
-      filter: blur(10px);
+        radial-gradient(circle, rgba(137, 191, 255, 0.2), rgba(137, 191, 255, 0.08) 34%, transparent 64%);
+      filter: blur(16px);
       transform: translate3d(calc(var(--shift-x) * 0.2), calc(var(--shift-y) * 0.2), -120px);
       transition: transform 180ms ease-out;
       pointer-events: none;
@@ -126,10 +140,10 @@
       left: 50%;
       top: 50%;
       border-radius: 999px;
-      border: 1px solid rgba(159, 215, 255, 0.22);
+      border: 1px solid rgba(56, 103, 168, 0.18);
       transform-style: preserve-3d;
       pointer-events: none;
-      box-shadow: 0 0 44px rgba(159, 215, 255, 0.08), inset 0 0 22px rgba(159, 215, 255, 0.06);
+      box-shadow: 0 0 32px rgba(72, 110, 255, 0.08), inset 0 0 16px rgba(159, 215, 255, 0.06);
     }
 
     .ring.one {
@@ -146,7 +160,7 @@
       height: 620px;
       margin-left: -310px;
       margin-top: -310px;
-      border-color: rgba(113, 141, 255, 0.24);
+      border-color: rgba(104, 139, 214, 0.2);
       transform: rotateY(72deg) rotateZ(0deg) translateZ(80px);
       animation: spin-b 18s linear infinite reverse;
     }
@@ -171,12 +185,26 @@
       transition: transform 160ms ease-out;
     }
 
+    .panda-preview {
+      position: absolute;
+      width: min(78vw, 860px);
+      max-width: 72%;
+      aspect-ratio: 1;
+      object-fit: contain;
+      pointer-events: none;
+      filter: drop-shadow(0 36px 70px rgba(26, 47, 87, 0.18));
+      transform: translateZ(80px) scale(1.02);
+      transition: opacity 220ms ease;
+      z-index: 0;
+    }
+
     model-viewer {
       width: min(92vw, 1100px);
       height: min(78vh, 820px);
       background: transparent;
       --poster-color: transparent;
-      filter: drop-shadow(0 30px 80px rgba(0, 0, 0, 0.52));
+      filter: drop-shadow(0 30px 64px rgba(26, 47, 87, 0.16));
+      z-index: 1;
     }
 
     .glare {
@@ -184,8 +212,8 @@
       inset: 12% 18% 24%;
       border-radius: 42px;
       background:
-        radial-gradient(circle at var(--glow-x) var(--glow-y), rgba(255, 255, 255, 0.18), transparent 18%),
-        linear-gradient(180deg, rgba(255, 255, 255, 0.06), transparent 38%);
+        radial-gradient(circle at var(--glow-x) var(--glow-y), rgba(255, 255, 255, 0.62), transparent 18%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.18), transparent 38%);
       mix-blend-mode: screen;
       opacity: 0.72;
       pointer-events: none;
@@ -212,21 +240,21 @@
       padding: 0 24px;
       border-radius: 999px;
       border: 1px solid var(--line-strong);
-      background: rgba(7, 12, 22, 0.58);
-      color: var(--text);
+      background: rgba(11, 23, 43, 0.7);
+      color: #f6fbff;
       text-decoration: none;
       font-size: clamp(18px, 2vw, 24px);
       letter-spacing: 0.1em;
       text-transform: lowercase;
       backdrop-filter: blur(14px);
-      box-shadow: 0 18px 60px rgba(0, 0, 0, 0.34);
+      box-shadow: 0 18px 48px rgba(24, 48, 92, 0.16);
       transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
     }
 
     .footer a:hover {
       transform: translateY(-2px) scale(1.015);
-      border-color: rgba(159, 215, 255, 0.48);
-      box-shadow: 0 24px 72px rgba(72, 110, 255, 0.18);
+      border-color: rgba(61, 115, 191, 0.42);
+      box-shadow: 0 24px 60px rgba(72, 110, 255, 0.16);
     }
 
     @keyframes spin-a {
@@ -251,6 +279,10 @@
 
       .viewer-shell {
         inset: 10% 4% 16%;
+      }
+
+      .panda-preview {
+        max-width: 90%;
       }
 
       model-viewer {
@@ -305,7 +337,7 @@
       }
     }
   </style>
-  <script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer/dist/model-viewer-module.min.js"></script>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 </head>
 <body>
   <main class="page">
@@ -316,6 +348,11 @@
         <div class="ring two"></div>
         <div class="ring three"></div>
         <div class="viewer-shell" id="viewerShell">
+          <img
+            class="panda-preview"
+            id="pandaPreview"
+            src="/assets/panda-preview.png"
+            alt="Panda preview">
           <model-viewer
             id="panda"
             src="/assets/panda.glb"
@@ -327,6 +364,7 @@
             shadow-intensity="1.2"
             shadow-softness="0.9"
             exposure="1.08"
+            environment-image="neutral"
             interaction-prompt="none"
             min-camera-orbit="auto 58deg auto"
             max-camera-orbit="auto 102deg auto"
@@ -348,6 +386,7 @@
     const scene = document.getElementById("scene");
     const viewerShell = document.getElementById("viewerShell");
     const panda = document.getElementById("panda");
+    const pandaPreview = document.getElementById("pandaPreview");
     let raf = null;
     let targetX = 0;
     let targetY = 0;
@@ -398,7 +437,16 @@
     });
 
     panda.addEventListener("load", () => {
+      pandaPreview.style.opacity = "0";
+      window.setTimeout(() => {
+        pandaPreview.style.display = "none";
+      }, 260);
       panda.dismissPoster();
+    });
+
+    panda.addEventListener("error", () => {
+      pandaPreview.style.display = "";
+      pandaPreview.style.opacity = "1";
     });
   </script>
 </body>
