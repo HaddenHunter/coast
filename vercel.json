@@ -6,6 +6,7 @@
     { "src": "/coast/pricing.json$", "dest": "/cost/pricing.json" },
     { "src": "/cost/?$", "dest": "/cost/index.html" },
     { "src": "/cost/pricing.json$", "dest": "/cost/pricing.json" },
+    { "src": "/assets/(.*)$", "dest": "/assets/$1" },
     { "src": "/$", "dest": "/index.html" },
     { "src": "/(.*)", "dest": "/index.html" }
   ],

@@ -3,20 +3,23 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>www.c8.fit · Panda Coast</title>
-  <meta name="description" content="www.c8.fit 首页采用裸眼 3D 熊猫舞台动画，入口跳转到 /coast 成本计算器。">
+  <title>www.c8.fit</title>
+  <meta name="description" content="Interactive panda landing page for www.c8.fit.">
   <style>
     :root {
-      --bg: #03060d;
-      --bg-soft: #0b111e;
-      --line: rgba(140, 188, 255, 0.16);
-      --line-strong: rgba(140, 188, 255, 0.3);
-      --text: #edf4ff;
-      --muted: #91a3ba;
-      --accent: #8cd0ff;
-      --accent-2: #88a1ff;
-      --panel: rgba(8, 13, 24, 0.58);
-      --shadow: 0 30px 120px rgba(0, 0, 0, 0.56);
+      --bg: #02050b;
+      --bg-2: #08111f;
+      --line: rgba(159, 215, 255, 0.18);
+      --line-strong: rgba(159, 215, 255, 0.34);
+      --text: #eef6ff;
+      --muted: rgba(238, 246, 255, 0.76);
+      --glow-x: 50%;
+      --glow-y: 44%;
+      --rotate-x: 0deg;
+      --rotate-y: 0deg;
+      --shift-x: 0px;
+      --shift-y: 0px;
+      --shadow: 0 48px 160px rgba(0, 0, 0, 0.62);
     }
 
     * {
@@ -27,647 +30,376 @@
     body {
       margin: 0;
       min-height: 100%;
+      background:
+        radial-gradient(circle at 50% 16%, rgba(120, 186, 255, 0.22), transparent 22%),
+        radial-gradient(circle at 50% 100%, rgba(72, 110, 255, 0.18), transparent 24%),
+        linear-gradient(180deg, var(--bg-2) 0%, var(--bg) 100%);
+      overflow: hidden;
     }
 
     body {
-      overflow-x: hidden;
+      position: relative;
       color: var(--text);
-      font: 15px/1.6 ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background:
-        radial-gradient(circle at 50% 12%, rgba(140, 208, 255, 0.18), transparent 24%),
-        radial-gradient(circle at 20% 90%, rgba(136, 161, 255, 0.12), transparent 26%),
-        linear-gradient(180deg, #07101d 0%, var(--bg) 100%);
+      font: 15px/1.4 ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
 
     body::before {
       content: "";
-      position: fixed;
+      position: absolute;
       inset: 0;
       pointer-events: none;
       background-image:
-        linear-gradient(rgba(140, 208, 255, 0.05) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(140, 208, 255, 0.05) 1px, transparent 1px);
-      background-size: 46px 46px;
-      mask-image: radial-gradient(circle at center, black 26%, transparent 78%);
-      opacity: 0.3;
+        linear-gradient(rgba(159, 215, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(159, 215, 255, 0.05) 1px, transparent 1px);
+      background-size: 52px 52px;
+      mask-image: radial-gradient(circle at center, black 28%, transparent 72%);
+      opacity: 0.36;
     }
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    h1, p {
-      margin: 0;
-    }
-
-    .wrap {
+    .page {
       position: relative;
       z-index: 1;
-      width: min(1220px, calc(100% - 28px));
-      margin: 0 auto;
-      padding-bottom: 28px;
-    }
-
-    .nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      padding: 18px 0 10px;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-weight: 700;
-      letter-spacing: 0.04em;
-    }
-
-    .brand-mark {
       display: grid;
+      min-height: 100vh;
       place-items: center;
-      width: 42px;
-      height: 42px;
-      border-radius: 14px;
-      border: 1px solid var(--line-strong);
-      background: linear-gradient(135deg, rgba(140, 208, 255, 0.16), rgba(136, 161, 255, 0.16));
-      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+      padding: 20px;
     }
 
-    .nav-links {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 44px;
-      padding: 0 16px;
-      border-radius: 999px;
-      border: 1px solid var(--line);
-      background: rgba(8, 14, 26, 0.54);
-      transition: transform 140ms ease, border-color 140ms ease, background 140ms ease;
-    }
-
-    .btn:hover {
-      transform: translateY(-1px);
-      border-color: var(--line-strong);
-      background: rgba(12, 20, 35, 0.78);
-    }
-
-    .btn.primary {
-      border-color: rgba(140, 208, 255, 0.24);
-      background: linear-gradient(135deg, rgba(140, 208, 255, 0.18), rgba(136, 161, 255, 0.18));
-      box-shadow: 0 14px 40px rgba(58, 130, 246, 0.2);
-    }
-
-    .hero {
-      display: grid;
-      grid-template-columns: minmax(0, 1.05fr) minmax(420px, 0.95fr);
-      gap: 26px;
-      align-items: center;
-      min-height: calc(100vh - 96px);
-      padding: 10px 0 30px;
-    }
-
-    .copy {
-      max-width: 560px;
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 8px 12px;
-      border-radius: 999px;
-      border: 1px solid rgba(140, 208, 255, 0.2);
-      background: rgba(140, 208, 255, 0.08);
-      color: #d4ebff;
-      font-size: 12px;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    h1 {
-      margin-top: 18px;
-      font-size: clamp(48px, 7vw, 96px);
-      line-height: 0.92;
-      letter-spacing: -0.065em;
-      text-wrap: balance;
-    }
-
-    .lead {
-      margin-top: 18px;
-      color: #c2d3e7;
-      font-size: 17px;
-      max-width: 34ch;
-    }
-
-    .actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 28px;
-    }
-
-    .note {
-      margin-top: 18px;
-      color: var(--muted);
-      font-size: 13px;
-    }
-
-    .stage-shell {
+    .scene {
       position: relative;
-      height: min(74vh, 760px);
-      min-height: 560px;
-      border-radius: 34px;
-      border: 1px solid var(--line);
-      background:
-        linear-gradient(180deg, rgba(11, 19, 33, 0.92), rgba(4, 9, 17, 0.94));
-      box-shadow: var(--shadow);
-      overflow: hidden;
-      perspective: 1800px;
-    }
-
-    .stage-shell::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(circle at 50% 18%, rgba(140, 208, 255, 0.22), transparent 22%),
-        radial-gradient(circle at 50% 110%, rgba(136, 161, 255, 0.18), transparent 26%);
-      pointer-events: none;
+      width: min(100%, 1400px);
+      height: min(88vh, 980px);
+      perspective: 2200px;
     }
 
     .stage {
       position: absolute;
       inset: 0;
-      display: grid;
-      place-items: center;
+      border-radius: 40px;
       transform-style: preserve-3d;
+      transform: rotateX(var(--rotate-x)) rotateY(var(--rotate-y));
+      transition: transform 160ms ease-out;
     }
 
-    .halo,
-    .ring,
-    .floor,
-    .panda {
+    .stage::before,
+    .stage::after {
+      content: "";
       position: absolute;
-      transform-style: preserve-3d;
+      inset: 0;
+      border-radius: 40px;
+      pointer-events: none;
+    }
+
+    .stage::before {
+      background:
+        radial-gradient(circle at var(--glow-x) var(--glow-y), rgba(163, 225, 255, 0.28), transparent 18%),
+        radial-gradient(circle at 50% 64%, rgba(91, 138, 255, 0.22), transparent 28%),
+        linear-gradient(180deg, rgba(8, 15, 28, 0.16), rgba(8, 15, 28, 0.72));
+      filter: blur(2px);
+    }
+
+    .stage::after {
+      inset: 5% 7%;
+      border: 1px solid var(--line);
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.03), var(--shadow);
+      background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.01)),
+        rgba(6, 11, 20, 0.44);
+      backdrop-filter: blur(12px);
+      transform: translateZ(-10px);
     }
 
     .halo {
-      width: 520px;
-      height: 520px;
-      border-radius: 999px;
-      background: radial-gradient(circle, rgba(140, 208, 255, 0.2), rgba(140, 208, 255, 0.04) 42%, transparent 70%);
-      filter: blur(8px);
-      transform: translateZ(-40px);
-      animation: haloPulse 5.5s ease-in-out infinite;
+      position: absolute;
+      inset: 18% 23% 15%;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle, rgba(164, 226, 255, 0.28), rgba(164, 226, 255, 0.08) 34%, transparent 64%);
+      filter: blur(10px);
+      transform: translate3d(calc(var(--shift-x) * 0.2), calc(var(--shift-y) * 0.2), -120px);
+      transition: transform 180ms ease-out;
+      pointer-events: none;
     }
 
     .ring {
+      position: absolute;
+      left: 50%;
+      top: 50%;
       border-radius: 999px;
-      border: 1px solid rgba(140, 208, 255, 0.3);
-      box-shadow: 0 0 40px rgba(140, 208, 255, 0.12), inset 0 0 20px rgba(140, 208, 255, 0.08);
+      border: 1px solid rgba(159, 215, 255, 0.22);
+      transform-style: preserve-3d;
+      pointer-events: none;
+      box-shadow: 0 0 44px rgba(159, 215, 255, 0.08), inset 0 0 22px rgba(159, 215, 255, 0.06);
     }
 
     .ring.one {
-      width: 420px;
-      height: 420px;
-      transform: rotateX(68deg) translateZ(-16px);
-      animation: ringSpinA 14s linear infinite;
+      width: 760px;
+      height: 760px;
+      margin-left: -380px;
+      margin-top: -380px;
+      transform: rotateX(78deg) rotateZ(0deg) translateZ(-120px);
+      animation: spin-a 24s linear infinite;
     }
 
     .ring.two {
-      width: 340px;
-      height: 340px;
-      border-color: rgba(136, 161, 255, 0.32);
-      transform: rotateY(66deg) rotateZ(10deg) translateZ(40px);
-      animation: ringSpinB 11s linear infinite reverse;
+      width: 620px;
+      height: 620px;
+      margin-left: -310px;
+      margin-top: -310px;
+      border-color: rgba(113, 141, 255, 0.24);
+      transform: rotateY(72deg) rotateZ(0deg) translateZ(80px);
+      animation: spin-b 18s linear infinite reverse;
     }
 
     .ring.three {
-      width: 480px;
-      height: 190px;
-      border-color: rgba(140, 208, 255, 0.18);
-      transform: rotateX(84deg) translateY(170px) translateZ(-50px);
-      animation: ringPulse 6s ease-in-out infinite;
+      width: 820px;
+      height: 280px;
+      margin-left: -410px;
+      margin-top: -20px;
+      transform: rotateX(82deg) translateZ(-80px);
+      opacity: 0.72;
+      animation: pulse 6.2s ease-in-out infinite;
     }
 
-    .floor {
-      width: 560px;
-      height: 200px;
-      border-radius: 50%;
-      background:
-        radial-gradient(circle, rgba(140, 208, 255, 0.26), rgba(140, 208, 255, 0.08) 34%, rgba(5, 9, 16, 0) 70%);
-      transform: rotateX(82deg) translateY(260px) translateZ(-120px);
-      filter: blur(10px);
-      opacity: 0.75;
-    }
-
-    .panda {
-      width: 380px;
-      height: 430px;
-      animation: pandaFloat 6.4s ease-in-out infinite;
-    }
-
-    .panda-body,
-    .panda-head,
-    .panda-belly,
-    .ear,
-    .eye-patch,
-    .eye,
-    .arm,
-    .leg,
-    .muzzle,
-    .nose,
-    .glow {
+    .viewer-shell {
       position: absolute;
+      inset: 8% 10% 12%;
+      display: grid;
+      place-items: center;
       transform-style: preserve-3d;
+      transform: translate3d(calc(var(--shift-x) * 0.6), calc(var(--shift-y) * 0.6), 120px);
+      transition: transform 160ms ease-out;
     }
 
-    .glow {
-      inset: 80px 90px 30px;
-      border-radius: 999px;
-      background: radial-gradient(circle, rgba(140, 208, 255, 0.3), transparent 70%);
-      filter: blur(18px);
-      transform: translateZ(-40px);
+    model-viewer {
+      width: min(92vw, 1100px);
+      height: min(78vh, 820px);
+      background: transparent;
+      --poster-color: transparent;
+      filter: drop-shadow(0 30px 80px rgba(0, 0, 0, 0.52));
     }
 
-    .panda-body {
-      left: 110px;
-      top: 130px;
-      width: 165px;
-      height: 210px;
-      border-radius: 46% 46% 42% 42%;
-      background: linear-gradient(180deg, #0f1725 0%, #0a101b 100%);
-      transform: rotateX(10deg) rotateY(-8deg) translateZ(10px);
-      box-shadow: inset -14px -18px 30px rgba(255, 255, 255, 0.03), 0 24px 40px rgba(0, 0, 0, 0.26);
-    }
-
-    .panda-belly {
-      left: 26px;
-      top: 30px;
-      width: 112px;
-      height: 140px;
-      border-radius: 48%;
-      background: radial-gradient(circle at 40% 32%, #ffffff 0%, #edf2fb 52%, #d4dcea 100%);
-      transform: translateZ(26px);
-    }
-
-    .panda-head {
-      left: 82px;
-      top: 32px;
-      width: 220px;
-      height: 196px;
-      border-radius: 48%;
-      background: radial-gradient(circle at 42% 32%, #ffffff 0%, #eff4fb 60%, #d4dceb 100%);
-      transform: rotateX(-8deg) rotateY(8deg) translateZ(56px);
-      box-shadow: inset -16px -18px 34px rgba(4, 11, 22, 0.1);
-    }
-
-    .ear {
-      width: 72px;
-      height: 80px;
-      border-radius: 52% 52% 48% 48%;
-      background: radial-gradient(circle at 35% 35%, #202838 0%, #0f1521 70%, #0a0d14 100%);
-      top: -18px;
-      box-shadow: 0 16px 24px rgba(0, 0, 0, 0.22);
-    }
-
-    .ear.left {
-      left: 18px;
-      transform: rotateZ(-22deg) translateZ(-2px);
-    }
-
-    .ear.right {
-      right: 20px;
-      transform: rotateZ(24deg) translateZ(-2px);
-    }
-
-    .eye-patch {
-      width: 58px;
-      height: 70px;
-      border-radius: 48% 52% 50% 50%;
-      background: radial-gradient(circle at 38% 36%, #1f2938 0%, #0d121a 74%, #090c12 100%);
-      top: 58px;
-      transform: translateZ(16px) rotateZ(-6deg);
-    }
-
-    .eye-patch.left {
-      left: 34px;
-    }
-
-    .eye-patch.right {
-      right: 38px;
-      transform: translateZ(16px) rotateZ(6deg);
-    }
-
-    .eye {
-      width: 16px;
-      height: 20px;
-      border-radius: 50%;
-      background: #05070b;
-      top: 22px;
-      left: 22px;
-      box-shadow: inset 3px 3px 0 rgba(255, 255, 255, 0.08);
-    }
-
-    .eye::after {
-      content: "";
+    .glare {
       position: absolute;
-      width: 6px;
-      height: 6px;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.94);
-      top: 4px;
-      left: 3px;
-    }
-
-    .muzzle {
-      left: 74px;
-      top: 102px;
-      width: 72px;
-      height: 52px;
-      border-radius: 48%;
-      background: linear-gradient(180deg, #f7fafc 0%, #dee5f0 100%);
-      transform: translateZ(24px);
-      box-shadow: inset 0 -10px 14px rgba(15, 23, 34, 0.08);
-    }
-
-    .nose {
-      left: 26px;
-      top: 12px;
-      width: 20px;
-      height: 14px;
-      border-radius: 45% 45% 56% 56%;
-      background: #0a0d12;
-    }
-
-    .nose::after {
-      content: "";
-      position: absolute;
-      left: 9px;
-      top: 12px;
-      width: 2px;
-      height: 10px;
-      border-radius: 999px;
-      background: #0a0d12;
-      box-shadow: -8px 8px 0 #0a0d12, 8px 8px 0 #0a0d12;
-    }
-
-    .arm,
-    .leg {
-      background: linear-gradient(180deg, #141c29 0%, #090f18 100%);
-      box-shadow: inset -10px -12px 18px rgba(255, 255, 255, 0.02);
-    }
-
-    .arm {
-      top: 164px;
-      width: 58px;
-      height: 138px;
-      border-radius: 999px;
-    }
-
-    .arm.left {
-      left: 90px;
-      transform: rotateZ(26deg) translateZ(2px);
-      animation: armWave 6.4s ease-in-out infinite;
-    }
-
-    .arm.right {
-      right: 92px;
-      transform: rotateZ(-22deg) translateZ(-2px);
-    }
-
-    .leg {
-      top: 290px;
-      width: 68px;
-      height: 108px;
-      border-radius: 999px 999px 30px 30px;
-    }
-
-    .leg.left {
-      left: 118px;
-      transform: rotateZ(8deg) translateZ(2px);
-    }
-
-    .leg.right {
-      right: 112px;
-      transform: rotateZ(-8deg) translateZ(0);
-    }
-
-    .stage-copy {
-      position: absolute;
-      left: 22px;
-      right: 22px;
-      bottom: 18px;
-      display: flex;
-      align-items: end;
-      justify-content: space-between;
-      gap: 16px;
-      padding: 16px 18px;
-      border: 1px solid var(--line);
-      border-radius: 22px;
-      background: var(--panel);
-      backdrop-filter: blur(14px);
-    }
-
-    .stage-copy small {
-      display: block;
-      margin-bottom: 6px;
-      color: var(--muted);
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    .stage-copy p {
-      max-width: 42ch;
-      color: #c2d1e5;
-      font-size: 14px;
-    }
-
-    .stage-copy strong {
-      display: block;
-      margin-top: 6px;
-      font-size: 24px;
-      letter-spacing: -0.04em;
+      inset: 12% 18% 24%;
+      border-radius: 42px;
+      background:
+        radial-gradient(circle at var(--glow-x) var(--glow-y), rgba(255, 255, 255, 0.18), transparent 18%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.06), transparent 38%);
+      mix-blend-mode: screen;
+      opacity: 0.72;
+      pointer-events: none;
+      transform: translateZ(140px);
     }
 
     .footer {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 18px;
       display: flex;
+      justify-content: center;
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .footer a {
+      pointer-events: auto;
+      display: inline-flex;
       align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      flex-wrap: wrap;
-      color: var(--muted);
-      font-size: 13px;
-      padding: 0 0 8px;
+      justify-content: center;
+      min-height: 52px;
+      padding: 0 24px;
+      border-radius: 999px;
+      border: 1px solid var(--line-strong);
+      background: rgba(7, 12, 22, 0.58);
+      color: var(--text);
+      text-decoration: none;
+      font-size: clamp(18px, 2vw, 24px);
+      letter-spacing: 0.1em;
+      text-transform: lowercase;
+      backdrop-filter: blur(14px);
+      box-shadow: 0 18px 60px rgba(0, 0, 0, 0.34);
+      transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
     }
 
-    @keyframes pandaFloat {
-      0%, 100% { transform: translateY(0) rotateY(-10deg) rotateX(4deg); }
-      25% { transform: translateY(-12px) rotateY(4deg) rotateX(8deg); }
-      50% { transform: translateY(6px) rotateY(12deg) rotateX(2deg); }
-      75% { transform: translateY(-8px) rotateY(-4deg) rotateX(7deg); }
+    .footer a:hover {
+      transform: translateY(-2px) scale(1.015);
+      border-color: rgba(159, 215, 255, 0.48);
+      box-shadow: 0 24px 72px rgba(72, 110, 255, 0.18);
     }
 
-    @keyframes ringSpinA {
-      from { transform: rotateX(68deg) rotateZ(0deg) translateZ(-16px); }
-      to { transform: rotateX(68deg) rotateZ(360deg) translateZ(-16px); }
+    @keyframes spin-a {
+      from { transform: rotateX(78deg) rotateZ(0deg) translateZ(-120px); }
+      to { transform: rotateX(78deg) rotateZ(360deg) translateZ(-120px); }
     }
 
-    @keyframes ringSpinB {
-      from { transform: rotateY(66deg) rotateZ(0deg) translateZ(40px); }
-      to { transform: rotateY(66deg) rotateZ(360deg) translateZ(40px); }
+    @keyframes spin-b {
+      from { transform: rotateY(72deg) rotateZ(0deg) translateZ(80px); }
+      to { transform: rotateY(72deg) rotateZ(360deg) translateZ(80px); }
     }
 
-    @keyframes ringPulse {
-      0%, 100% { opacity: 0.45; transform: rotateX(84deg) translateY(170px) translateZ(-50px) scale(1); }
-      50% { opacity: 0.78; transform: rotateX(84deg) translateY(170px) translateZ(-50px) scale(1.05); }
+    @keyframes pulse {
+      0%, 100% { opacity: 0.45; transform: rotateX(82deg) translateZ(-80px) scale(0.98); }
+      50% { opacity: 0.84; transform: rotateX(82deg) translateZ(-80px) scale(1.03); }
     }
 
-    @keyframes haloPulse {
-      0%, 100% { opacity: 0.55; transform: translateZ(-40px) scale(0.95); }
-      50% { opacity: 0.9; transform: translateZ(-40px) scale(1.04); }
+    @media (max-width: 900px) {
+      .scene {
+        height: min(82vh, 760px);
+      }
+
+      .viewer-shell {
+        inset: 10% 4% 16%;
+      }
+
+      model-viewer {
+        width: 100%;
+        height: min(72vh, 680px);
+      }
+
+      .ring.one {
+        width: 560px;
+        height: 560px;
+        margin-left: -280px;
+        margin-top: -280px;
+      }
+
+      .ring.two {
+        width: 460px;
+        height: 460px;
+        margin-left: -230px;
+        margin-top: -230px;
+      }
+
+      .ring.three {
+        width: 620px;
+        height: 220px;
+        margin-left: -310px;
+      }
     }
 
-    @keyframes armWave {
-      0%, 100% { transform: rotateZ(26deg) translateZ(2px); }
-      50% { transform: rotateZ(42deg) translateY(-8px) translateZ(10px); }
-    }
-
-    @media (max-width: 1040px) {
-      .hero {
-        grid-template-columns: 1fr;
-        min-height: auto;
+    @media (max-width: 640px) {
+      .page {
+        padding: 8px;
       }
 
-      .copy {
-        max-width: none;
+      .scene {
+        width: 100%;
+        height: 80vh;
       }
 
-      .stage-shell {
-        height: min(74vh, 680px);
-      }
-    }
-
-    @media (max-width: 720px) {
-      .wrap {
-        width: min(100% - 18px, 1220px);
+      .stage::after {
+        inset: 2%;
+        border-radius: 28px;
       }
 
-      .nav,
-      .footer,
-      .stage-copy {
-        display: block;
+      .footer {
+        bottom: 14px;
       }
 
-      .nav-links,
-      .actions {
-        margin-top: 14px;
-      }
-
-      .stage-shell {
-        min-height: 480px;
-        height: 72vh;
-      }
-
-      .panda {
-        transform: scale(0.82);
-        transform-origin: center;
-      }
-
-      .stage-copy {
-        padding: 14px;
-      }
-
-      .stage-copy strong {
-        margin-top: 12px;
+      .footer a {
+        min-height: 48px;
+        padding: 0 20px;
+        font-size: 18px;
       }
     }
   </style>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer/dist/model-viewer-module.min.js"></script>
 </head>
 <body>
-  <div class="wrap">
-    <nav class="nav">
-      <a class="brand" href="/">
-        <span class="brand-mark">C8</span>
-        <span>www.c8.fit</span>
-      </a>
-      <div class="nav-links">
-        <a class="btn" href="https://c8software.com" target="_blank" rel="noreferrer">c8software.com</a>
-        <a class="btn primary" href="/coast">进入 /coast</a>
-      </div>
-    </nav>
-
-    <section class="hero">
-      <div class="copy">
-        <span class="eyebrow">Panda stage / Coast entry / static site</span>
-        <h1>让首页只做一件事， 先把人吸住。</h1>
-        <p class="lead">根域名现在是一块裸眼 3D 熊猫舞台。视觉负责第一眼的记忆点，真正的工具能力放到 `/coast`，让首页和产品页各司其职。</p>
-        <div class="actions">
-          <a class="btn primary" href="/coast">打开 Coast 计算器</a>
-          <a class="btn" href="https://www.c8.fit/coast" target="_blank" rel="noreferrer">www.c8.fit/coast</a>
-        </div>
-        <p class="note">纯前端实现的 3D 视觉场景，不依赖外部视频素材，部署依然保持静态站结构。</p>
-      </div>
-
-      <div class="stage-shell">
-        <div class="stage">
-          <div class="halo"></div>
-          <div class="ring one"></div>
-          <div class="ring two"></div>
-          <div class="ring three"></div>
-          <div class="floor"></div>
-
-          <div class="panda">
-            <div class="glow"></div>
-            <div class="arm left"></div>
-            <div class="arm right"></div>
-            <div class="leg left"></div>
-            <div class="leg right"></div>
-            <div class="panda-body">
-              <div class="panda-belly"></div>
-            </div>
-            <div class="panda-head">
-              <div class="ear left"></div>
-              <div class="ear right"></div>
-              <div class="eye-patch left">
-                <div class="eye"></div>
-              </div>
-              <div class="eye-patch right">
-                <div class="eye"></div>
-              </div>
-              <div class="muzzle">
-                <div class="nose"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="stage-copy">
-          <div>
-            <small>Stage signal</small>
-            <p>黑场、光环、旋转轨道和熊猫主体叠出“裸眼 3D 舞台感”，首页不用再堆常规介绍卡片。</p>
-          </div>
-          <div>
-            <small>Primary route</small>
-            <strong>/coast</strong>
-          </div>
+  <main class="page">
+    <section class="scene" id="scene">
+      <div class="stage" id="stage">
+        <div class="halo"></div>
+        <div class="ring one"></div>
+        <div class="ring two"></div>
+        <div class="ring three"></div>
+        <div class="viewer-shell" id="viewerShell">
+          <model-viewer
+            id="panda"
+            src="/assets/panda.glb"
+            alt="Interactive panda"
+            camera-controls
+            auto-rotate
+            auto-rotate-delay="0"
+            rotation-per-second="18deg"
+            shadow-intensity="1.2"
+            shadow-softness="0.9"
+            exposure="1.08"
+            interaction-prompt="none"
+            min-camera-orbit="auto 58deg auto"
+            max-camera-orbit="auto 102deg auto"
+            camera-orbit="0deg 82deg 92%"
+            field-of-view="28deg">
+          </model-viewer>
+          <div class="glare"></div>
         </div>
       </div>
     </section>
+  </main>
 
-    <footer class="footer">
-      <span>www.c8.fit · Panda Coast landing</span>
-      <span>Static homepage + /coast tool path</span>
-    </footer>
-  </div>
+  <footer class="footer">
+    <a href="https://c8software.com" target="_blank" rel="noreferrer">c8software.com</a>
+  </footer>
+
+  <script>
+    const root = document.documentElement;
+    const scene = document.getElementById("scene");
+    const viewerShell = document.getElementById("viewerShell");
+    const panda = document.getElementById("panda");
+    let raf = null;
+    let targetX = 0;
+    let targetY = 0;
+
+    function applyMotion() {
+      raf = null;
+      const rotateY = targetX * 10;
+      const rotateX = targetY * -8;
+      const shiftX = targetX * 24;
+      const shiftY = targetY * 24;
+
+      root.style.setProperty("--rotate-y", rotateY.toFixed(2) + "deg");
+      root.style.setProperty("--rotate-x", rotateX.toFixed(2) + "deg");
+      root.style.setProperty("--shift-x", shiftX.toFixed(2) + "px");
+      root.style.setProperty("--shift-y", shiftY.toFixed(2) + "px");
+      root.style.setProperty("--glow-x", (50 + targetX * 18).toFixed(2) + "%");
+      root.style.setProperty("--glow-y", (44 + targetY * 14).toFixed(2) + "%");
+    }
+
+    function queueMotion(x, y) {
+      targetX = x;
+      targetY = y;
+      if (!raf) {
+        raf = requestAnimationFrame(applyMotion);
+      }
+    }
+
+    scene.addEventListener("pointermove", (event) => {
+      const rect = scene.getBoundingClientRect();
+      const x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
+      const y = ((event.clientY - rect.top) / rect.height) * 2 - 1;
+      queueMotion(x, y);
+    });
+
+    scene.addEventListener("pointerleave", () => {
+      queueMotion(0, 0);
+    });
+
+    scene.addEventListener("click", () => {
+      viewerShell.animate(
+        [
+          { transform: "translate3d(calc(var(--shift-x) * 0.6), calc(var(--shift-y) * 0.6), 120px) scale(1)" },
+          { transform: "translate3d(calc(var(--shift-x) * 0.6), calc(var(--shift-y) * 0.6), 120px) scale(1.035)" },
+          { transform: "translate3d(calc(var(--shift-x) * 0.6), calc(var(--shift-y) * 0.6), 120px) scale(1)" }
+        ],
+        { duration: 480, easing: "ease-out" }
+      );
+    });
+
+    panda.addEventListener("load", () => {
+      panda.dismissPoster();
+    });
+  </script>
 </body>
 </html>
