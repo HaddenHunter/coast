@@ -1,9 +1,9 @@
 {
   "_note": "本文件由 GitHub Actions 自动更新。页面只读取本地 pricing.json，不在用户访问时请求远端价格接口。数据源为 OpenRouter 公共 Models API，使用前仍建议核对官网。",
-  "updated": "2026-08-05",
+  "updated": "2026-08-06",
   "source": "OpenRouter Public Models API",
   "sourceUrl": "https://openrouter.ai/api/v1/models?sort=pricing-low-to-high",
-  "count": 338,
+  "count": 340,
   "models": [
     {
       "id": "cohere/north-mini-code:free",
@@ -426,6 +426,16 @@
       "limit": null
     },
     {
+      "id": "inclusionai/ling-3.0-flash",
+      "provider": "Inclusionai",
+      "input": 0.075,
+      "output": 0.22,
+      "cached": 0.015,
+      "ctx": "131K",
+      "free": false,
+      "limit": null
+    },
+    {
       "id": "qwen/qwen3-coder-30b-a3b-instruct",
       "provider": "Qwen",
       "input": 0.07,
@@ -472,6 +482,16 @@
       "output": 0.3,
       "cached": 0.0375,
       "ctx": "131K",
+      "free": false,
+      "limit": null
+    },
+    {
+      "id": "deepseek/deepseek-v4-flash",
+      "provider": "DeepSeek",
+      "input": 0.0882,
+      "output": 0.1764,
+      "cached": 0.01764,
+      "ctx": "1.0M",
       "free": false,
       "limit": null
     },
@@ -686,6 +706,16 @@
       "limit": null
     },
     {
+      "id": "qwen/qwen3-235b-a22b-2507",
+      "provider": "Qwen",
+      "input": 0.09,
+      "output": 0.55,
+      "cached": 0.09,
+      "ctx": "262K",
+      "free": false,
+      "limit": null
+    },
+    {
       "id": "qwen/qwen3-vl-32b-instruct",
       "provider": "Qwen",
       "input": 0.10400000000000001,
@@ -722,16 +752,6 @@
       "output": 0.15,
       "cached": 0.015,
       "ctx": "262K",
-      "free": false,
-      "limit": null
-    },
-    {
-      "id": "deepseek/deepseek-v4-flash",
-      "provider": "DeepSeek",
-      "input": 0.14,
-      "output": 0.28,
-      "cached": 0.028,
-      "ctx": "1.0M",
       "free": false,
       "limit": null
     },
@@ -826,16 +846,6 @@
       "limit": null
     },
     {
-      "id": "qwen/qwen3-235b-a22b-2507",
-      "provider": "Qwen",
-      "input": 0.14950000000000002,
-      "output": 0.5980000000000001,
-      "cached": 0.14950000000000002,
-      "ctx": "262K",
-      "free": false,
-      "limit": null
-    },
-    {
       "id": "cohere/command-r-08-2024",
       "provider": "Cohere",
       "input": 0.15,
@@ -901,7 +911,7 @@
       "input": 0.15,
       "output": 0.6,
       "cached": 0.015,
-      "ctx": "128K",
+      "ctx": "131K",
       "free": false,
       "limit": null
     },
@@ -922,16 +932,6 @@
       "output": 0.19999999999999998,
       "cached": 0.02,
       "ctx": "262K",
-      "free": false,
-      "limit": null
-    },
-    {
-      "id": "minimax/minimax-m2.5",
-      "provider": "Minimax",
-      "input": 0.15,
-      "output": 0.8999999999999999,
-      "cached": 0.049999999999999996,
-      "ctx": "205K",
       "free": false,
       "limit": null
     },
@@ -1062,6 +1062,16 @@
       "output": 1.1,
       "cached": 0.19999999999999998,
       "ctx": "1.0M",
+      "free": false,
+      "limit": null
+    },
+    {
+      "id": "minimax/minimax-m2.5",
+      "provider": "Minimax",
+      "input": 0.22,
+      "output": 0.8999999999999999,
+      "cached": 0.049999999999999996,
+      "ctx": "205K",
       "free": false,
       "limit": null
     },
@@ -1506,16 +1516,6 @@
       "limit": null
     },
     {
-      "id": "qwen/qwen3.6-27b",
-      "provider": "Qwen",
-      "input": 0.28900000000000003,
-      "output": 2.4,
-      "cached": 0.28900000000000003,
-      "ctx": "262K",
-      "free": false,
-      "limit": null
-    },
-    {
       "id": "baidu/ernie-4.5-vl-424b-a47b",
       "provider": "Baidu",
       "input": 0.42,
@@ -1886,6 +1886,16 @@
       "limit": null
     },
     {
+      "id": "qwen/qwen3.6-27b",
+      "provider": "Qwen",
+      "input": 0.6,
+      "output": 3.5999999999999996,
+      "cached": 0.12,
+      "ctx": "262K",
+      "free": false,
+      "limit": null
+    },
+    {
       "id": "qwen/qwen3-coder-plus",
       "provider": "Qwen",
       "input": 0.65,
@@ -1928,7 +1938,7 @@
     {
       "id": "moonshotai/kimi-k2.7-code",
       "provider": "Moonshotai",
-      "input": 0.73,
+      "input": 0.7,
       "output": 3.5,
       "cached": 0.15,
       "ctx": "262K",
@@ -2018,9 +2028,9 @@
     {
       "id": "z-ai/glm-5.1",
       "provider": "Z Ai",
-      "input": 0.966,
-      "output": 3.036,
-      "cached": 0.1794,
+      "input": 0.952,
+      "output": 2.992,
+      "cached": 0.17679999999999998,
       "ctx": "205K",
       "free": false,
       "limit": null
@@ -2287,6 +2297,16 @@
     },
     {
       "id": "meta/muse-spark-1.1",
+      "provider": "Meta",
+      "input": 1.25,
+      "output": 4.25,
+      "cached": 0.15,
+      "ctx": "1.0M",
+      "free": false,
+      "limit": null
+    },
+    {
+      "id": "meta/muse-spark-1.2",
       "provider": "Meta",
       "input": 1.25,
       "output": 4.25,
