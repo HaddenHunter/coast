@@ -1,6 +1,6 @@
 {
   "_note": "本文件由 GitHub Actions 自动更新。页面只读取本地 pricing.json，不在用户访问时请求远端价格接口。数据源为 OpenRouter 公共 Models API，使用前仍建议核对官网。",
-  "updated": "2026-08-07",
+  "updated": "2026-08-08",
   "source": "OpenRouter Public Models API",
   "sourceUrl": "https://openrouter.ai/api/v1/models?sort=pricing-low-to-high",
   "count": 400,
@@ -486,16 +486,6 @@
       "limit": null
     },
     {
-      "id": "deepseek/deepseek-v4-flash",
-      "provider": "DeepSeek",
-      "input": 0.0882,
-      "output": 0.1764,
-      "cached": 0.01764,
-      "ctx": "1.0M",
-      "free": false,
-      "limit": null
-    },
-    {
       "id": "~deepseek/deepseek-v4-flash-latest",
       "provider": "~Deepseek",
       "input": 0.09,
@@ -612,6 +602,16 @@
       "output": 0.44999999999999996,
       "cached": 0.04,
       "ctx": "262K",
+      "free": false,
+      "limit": null
+    },
+    {
+      "id": "nvidia/nemotron-3-super-120b-a12b",
+      "provider": "Nvidia",
+      "input": 0.08499999999999999,
+      "output": 0.39999999999999997,
+      "cached": 0.08499999999999999,
+      "ctx": "1M",
       "free": false,
       "limit": null
     },
@@ -742,6 +742,16 @@
       "output": 0.15,
       "cached": 0.015,
       "ctx": "262K",
+      "free": false,
+      "limit": null
+    },
+    {
+      "id": "deepseek/deepseek-v4-flash",
+      "provider": "DeepSeek",
+      "input": 0.14,
+      "output": 0.28,
+      "cached": 0.028,
+      "ctx": "1.0M",
       "free": false,
       "limit": null
     },
@@ -1006,6 +1016,16 @@
       "limit": null
     },
     {
+      "id": "deepseek/deepseek-v3.2",
+      "provider": "DeepSeek",
+      "input": 0.26,
+      "output": 0.38,
+      "cached": 0.13,
+      "ctx": "164K",
+      "free": false,
+      "limit": null
+    },
+    {
       "id": "perceptron/perceptron-mk1",
       "provider": "Perceptron",
       "input": 0.15,
@@ -1042,16 +1062,6 @@
       "output": 0.85,
       "cached": 0.06,
       "ctx": "262K",
-      "free": false,
-      "limit": null
-    },
-    {
-      "id": "deepseek/deepseek-v3.2",
-      "provider": "DeepSeek",
-      "input": 0.26899999999999996,
-      "output": 0.39999999999999997,
-      "cached": 0.13449999999999998,
-      "ctx": "164K",
       "free": false,
       "limit": null
     },
@@ -1242,16 +1252,6 @@
       "output": 0.8999999999999999,
       "cached": 0.03,
       "ctx": "256K",
-      "free": false,
-      "limit": null
-    },
-    {
-      "id": "nvidia/nemotron-3-super-120b-a12b",
-      "provider": "Nvidia",
-      "input": 0.3,
-      "output": 0.8999999999999999,
-      "cached": 0.3,
-      "ctx": "1M",
       "free": false,
       "limit": null
     },
@@ -1476,6 +1476,16 @@
       "limit": null
     },
     {
+      "id": "z-ai/glm-5.2",
+      "provider": "Z Ai",
+      "input": 0.3892,
+      "output": 1.2232,
+      "cached": 0.07228,
+      "ctx": "1.0M",
+      "free": false,
+      "limit": null
+    },
+    {
       "id": "undi95/remm-slerp-l2-13b",
       "provider": "Undi95",
       "input": 0.44999999999999996,
@@ -1556,6 +1566,16 @@
       "limit": null
     },
     {
+      "id": "thinkingmachines/inkling-small",
+      "provider": "Thinkingmachines",
+      "input": 0.44999999999999996,
+      "output": 1.2,
+      "cached": 0.09999999999999999,
+      "ctx": "524K",
+      "free": false,
+      "limit": null
+    },
+    {
       "id": "mancer/weaver",
       "provider": "Mancer",
       "input": 0.5,
@@ -1592,16 +1612,6 @@
       "output": 2,
       "cached": 0.04,
       "ctx": "131K",
-      "free": false,
-      "limit": null
-    },
-    {
-      "id": "thinkingmachines/inkling-small",
-      "provider": "Thinkingmachines",
-      "input": 0.5,
-      "output": 1.2,
-      "cached": 0.09999999999999999,
-      "ctx": "524K",
       "free": false,
       "limit": null
     },
@@ -1798,9 +1808,9 @@
     {
       "id": "moonshotai/kimi-k2.6",
       "provider": "Moonshotai",
-      "input": 0.589,
-      "output": 2.48,
-      "cached": 0.0992,
+      "input": 0.5795,
+      "output": 2.44,
+      "cached": 0.0976,
       "ctx": "262K",
       "free": false,
       "limit": null
@@ -1872,16 +1882,6 @@
       "output": 0.7999999999999999,
       "cached": 0.7999999999999999,
       "ctx": "8K",
-      "free": false,
-      "limit": null
-    },
-    {
-      "id": "z-ai/glm-5.2",
-      "provider": "Z Ai",
-      "input": 0.6958,
-      "output": 2.1868,
-      "cached": 0.12922,
-      "ctx": "1.0M",
       "free": false,
       "limit": null
     },
@@ -2116,22 +2116,22 @@
       "limit": null
     },
     {
+      "id": "thinkingmachines/inkling",
+      "provider": "Thinkingmachines",
+      "input": 0.95,
+      "output": 4.05,
+      "cached": 0.16,
+      "ctx": "1.0M",
+      "free": false,
+      "limit": null
+    },
+    {
       "id": "deepcogito/cogito-v2.1-671b",
       "provider": "Deepcogito",
       "input": 1.25,
       "output": 1.25,
       "cached": 1.25,
       "ctx": "128K",
-      "free": false,
-      "limit": null
-    },
-    {
-      "id": "thinkingmachines/inkling",
-      "provider": "Thinkingmachines",
-      "input": 1,
-      "output": 4.05,
-      "cached": 0.16999999999999998,
-      "ctx": "1.0M",
       "free": false,
       "limit": null
     },
@@ -2346,6 +2346,16 @@
       "limit": null
     },
     {
+      "id": "~moonshotai/kimi-latest",
+      "provider": "~Moonshotai",
+      "input": 2.5,
+      "output": 14,
+      "cached": 0.29,
+      "ctx": "1.0M",
+      "free": false,
+      "limit": null
+    },
+    {
       "id": "meta/muse-spark-1.1",
       "provider": "Meta",
       "input": 1.25,
@@ -2361,16 +2371,6 @@
       "input": 1.25,
       "output": 4.25,
       "cached": 0.15,
-      "ctx": "1.0M",
-      "free": false,
-      "limit": null
-    },
-    {
-      "id": "~moonshotai/kimi-latest",
-      "provider": "~Moonshotai",
-      "input": 2.9000000000000004,
-      "output": 14,
-      "cached": 0.29,
       "ctx": "1.0M",
       "free": false,
       "limit": null
