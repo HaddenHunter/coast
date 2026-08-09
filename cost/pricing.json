@@ -1,6 +1,6 @@
 {
   "_note": "本文件由 GitHub Actions 自动更新。页面只读取本地 pricing.json，不在用户访问时请求远端价格接口。数据源为 OpenRouter 公共 Models API，使用前仍建议核对官网。",
-  "updated": "2026-08-08",
+  "updated": "2026-08-09",
   "source": "OpenRouter Public Models API",
   "sourceUrl": "https://openrouter.ai/api/v1/models?sort=pricing-low-to-high",
   "count": 400,
@@ -488,9 +488,9 @@
     {
       "id": "~deepseek/deepseek-v4-flash-latest",
       "provider": "~Deepseek",
-      "input": 0.09,
-      "output": 0.18,
-      "cached": 0.018,
+      "input": 0.079996,
+      "output": 0.252,
+      "cached": 0.0252,
       "ctx": "1.0M",
       "free": false,
       "limit": null
@@ -606,12 +606,12 @@
       "limit": null
     },
     {
-      "id": "nvidia/nemotron-3-super-120b-a12b",
-      "provider": "Nvidia",
-      "input": 0.08499999999999999,
-      "output": 0.39999999999999997,
-      "cached": 0.08499999999999999,
-      "ctx": "1M",
+      "id": "z-ai/glm-5.2",
+      "provider": "Z Ai",
+      "input": 0.098,
+      "output": 0.308,
+      "cached": 0.0182,
+      "ctx": "1.0M",
       "free": false,
       "limit": null
     },
@@ -958,7 +958,7 @@
     {
       "id": "qwen/qwen3.6-35b-a3b",
       "provider": "Qwen",
-      "input": 0.14,
+      "input": 0.15,
       "output": 1,
       "cached": 0.049999999999999996,
       "ctx": "262K",
@@ -1226,16 +1226,6 @@
       "limit": null
     },
     {
-      "id": "minimax/minimax-m2.7",
-      "provider": "Minimax",
-      "input": 0.27,
-      "output": 1.08,
-      "cached": 0.054,
-      "ctx": "205K",
-      "free": false,
-      "limit": null
-    },
-    {
       "id": "deepseek/deepseek-chat-v3-0324",
       "provider": "DeepSeek",
       "input": 0.27,
@@ -1252,6 +1242,16 @@
       "output": 0.8999999999999999,
       "cached": 0.03,
       "ctx": "256K",
+      "free": false,
+      "limit": null
+    },
+    {
+      "id": "nvidia/nemotron-3-super-120b-a12b",
+      "provider": "Nvidia",
+      "input": 0.3,
+      "output": 0.8999999999999999,
+      "cached": 0.3,
+      "ctx": "1M",
       "free": false,
       "limit": null
     },
@@ -1366,6 +1366,16 @@
       "limit": null
     },
     {
+      "id": "minimax/minimax-m2.7",
+      "provider": "Minimax",
+      "input": 0.3,
+      "output": 1.2,
+      "cached": 0.06,
+      "ctx": "205K",
+      "free": false,
+      "limit": null
+    },
+    {
       "id": "minimax/minimax-m3",
       "provider": "Minimax",
       "input": 0.3,
@@ -1472,16 +1482,6 @@
       "output": 1.7999999999999998,
       "cached": 0.3,
       "ctx": "1M",
-      "free": false,
-      "limit": null
-    },
-    {
-      "id": "z-ai/glm-5.2",
-      "provider": "Z Ai",
-      "input": 0.3892,
-      "output": 1.2232,
-      "cached": 0.07228,
-      "ctx": "1.0M",
       "free": false,
       "limit": null
     },
@@ -2346,16 +2346,6 @@
       "limit": null
     },
     {
-      "id": "~moonshotai/kimi-latest",
-      "provider": "~Moonshotai",
-      "input": 2.5,
-      "output": 14,
-      "cached": 0.29,
-      "ctx": "1.0M",
-      "free": false,
-      "limit": null
-    },
-    {
       "id": "meta/muse-spark-1.1",
       "provider": "Meta",
       "input": 1.25,
@@ -2371,6 +2361,16 @@
       "input": 1.25,
       "output": 4.25,
       "cached": 0.15,
+      "ctx": "1.0M",
+      "free": false,
+      "limit": null
+    },
+    {
+      "id": "~moonshotai/kimi-latest",
+      "provider": "~Moonshotai",
+      "input": 2.8,
+      "output": 14,
+      "cached": 0.29,
       "ctx": "1.0M",
       "free": false,
       "limit": null
