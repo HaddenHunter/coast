@@ -1,6 +1,6 @@
 {
   "_note": "本文件由 GitHub Actions 自动更新。页面只读取本地 pricing.json，不在用户访问时请求远端价格接口。数据源为 OpenRouter 公共 Models API，使用前仍建议核对官网。",
-  "updated": "2026-08-14",
+  "updated": "2026-08-15",
   "source": "OpenRouter Public Models API",
   "sourceUrl": "https://openrouter.ai/api/v1/models?sort=pricing-low-to-high",
   "count": 412,
@@ -12,16 +12,6 @@
       "output": 0,
       "cached": 0,
       "ctx": "256K",
-      "free": true,
-      "limit": null
-    },
-    {
-      "id": "dots-studio/dots-3-note-preview:free",
-      "provider": "Dots Studio",
-      "input": 0,
-      "output": 0,
-      "cached": 0,
-      "ctx": "512K",
       "free": true,
       "limit": null
     },
@@ -466,6 +456,26 @@
       "limit": null
     },
     {
+      "id": "~deepseek/deepseek-v4-flash-latest",
+      "provider": "~Deepseek",
+      "input": 0.07966,
+      "output": 0.15932,
+      "cached": 0.015932,
+      "ctx": "1.0M",
+      "free": false,
+      "limit": null
+    },
+    {
+      "id": "deepseek/deepseek-v4-flash",
+      "provider": "DeepSeek",
+      "input": 0.07966,
+      "output": 0.15932,
+      "cached": 0.015932,
+      "ctx": "1.0M",
+      "free": false,
+      "limit": null
+    },
+    {
       "id": "qwen/qwen3-coder-30b-a3b-instruct",
       "provider": "Qwen",
       "input": 0.07,
@@ -502,16 +512,6 @@
       "output": 0.3,
       "cached": 0.0375,
       "ctx": "131K",
-      "free": false,
-      "limit": null
-    },
-    {
-      "id": "~deepseek/deepseek-v4-flash-latest",
-      "provider": "~Deepseek",
-      "input": 0.079996,
-      "output": 0.252,
-      "cached": 0.0252,
-      "ctx": "1.0M",
       "free": false,
       "limit": null
     },
@@ -786,16 +786,6 @@
       "limit": null
     },
     {
-      "id": "deepseek/deepseek-v4-flash",
-      "provider": "DeepSeek",
-      "input": 0.14,
-      "output": 0.28,
-      "cached": 0.028,
-      "ctx": "1.0M",
-      "free": false,
-      "limit": null
-    },
-    {
       "id": "deepseek/deepseek-v4-flash-0731",
       "provider": "DeepSeek",
       "input": 0.14,
@@ -1016,22 +1006,22 @@
       "limit": null
     },
     {
-      "id": "meta-llama/llama-4-maverick",
-      "provider": "Meta Llama",
-      "input": 0.19999999999999998,
-      "output": 0.696,
-      "cached": 0.19999999999999998,
-      "ctx": "1.0M",
-      "free": false,
-      "limit": null
-    },
-    {
       "id": "qwen/qwen3-next-80b-a3b-thinking",
       "provider": "Qwen",
       "input": 0.15,
       "output": 1.2,
       "cached": 0.15,
       "ctx": "262K",
+      "free": false,
+      "limit": null
+    },
+    {
+      "id": "meta-llama/llama-4-maverick",
+      "provider": "Meta Llama",
+      "input": 0.19999999999999998,
+      "output": 0.7999999999999999,
+      "cached": 0.19999999999999998,
+      "ctx": "1.0M",
       "free": false,
       "limit": null
     },
@@ -1266,16 +1256,6 @@
       "limit": null
     },
     {
-      "id": "qwen/qwen3.5-35b-a3b",
-      "provider": "Qwen",
-      "input": 0.25,
-      "output": 1.25,
-      "cached": 0.25,
-      "ctx": "262K",
-      "free": false,
-      "limit": null
-    },
-    {
       "id": "deepseek/deepseek-chat-v3-0324",
       "provider": "DeepSeek",
       "input": 0.27,
@@ -1331,6 +1311,16 @@
       "input": 0.3,
       "output": 1,
       "cached": 0.09999999999999999,
+      "ctx": "262K",
+      "free": false,
+      "limit": null
+    },
+    {
+      "id": "qwen/qwen3.5-35b-a3b",
+      "provider": "Qwen",
+      "input": 0.22499999999999998,
+      "output": 1.7999999999999998,
+      "cached": 0.22499999999999998,
       "ctx": "262K",
       "free": false,
       "limit": null
@@ -1656,6 +1646,16 @@
       "limit": null
     },
     {
+      "id": "qwen/qwen3.5-397b-a17b",
+      "provider": "Qwen",
+      "input": 0.39,
+      "output": 2.34,
+      "cached": 0.39,
+      "ctx": "262K",
+      "free": false,
+      "limit": null
+    },
+    {
       "id": "thedrummer/skyfall-36b-v2",
       "provider": "Thedrummer",
       "input": 0.55,
@@ -1672,6 +1672,16 @@
       "output": 1.8199999999999998,
       "cached": 0.45499999999999996,
       "ctx": "131K",
+      "free": false,
+      "limit": null
+    },
+    {
+      "id": "z-ai/glm-5.2",
+      "provider": "Z Ai",
+      "input": 0.49,
+      "output": 1.54,
+      "cached": 0.091,
+      "ctx": "1.0M",
       "free": false,
       "limit": null
     },
@@ -1712,16 +1722,6 @@
       "output": 0.62,
       "cached": 0.62,
       "ctx": "66K",
-      "free": false,
-      "limit": null
-    },
-    {
-      "id": "z-ai/glm-4.6",
-      "provider": "Z Ai",
-      "input": 0.5,
-      "output": 2,
-      "cached": 0.09999999999999999,
-      "ctx": "205K",
       "free": false,
       "limit": null
     },
@@ -1806,12 +1806,42 @@
       "limit": null
     },
     {
+      "id": "qwen/qwen3.8-27b",
+      "provider": "Qwen",
+      "input": 0.44999999999999996,
+      "output": 3.1999999999999997,
+      "cached": 0.44999999999999996,
+      "ctx": "262K",
+      "free": false,
+      "limit": null
+    },
+    {
+      "id": "z-ai/glm-4.6",
+      "provider": "Z Ai",
+      "input": 0.55,
+      "output": 2.2,
+      "cached": 0.11,
+      "ctx": "205K",
+      "free": false,
+      "limit": null
+    },
+    {
       "id": "z-ai/glm-4.5v",
       "provider": "Z Ai",
       "input": 0.6,
       "output": 1.7999999999999998,
       "cached": 0.11,
       "ctx": "66K",
+      "free": false,
+      "limit": null
+    },
+    {
+      "id": "z-ai/glm-5",
+      "provider": "Z Ai",
+      "input": 0.6,
+      "output": 1.92,
+      "cached": 0.12,
+      "ctx": "205K",
       "free": false,
       "limit": null
     },
@@ -1852,16 +1882,6 @@
       "output": 2.2,
       "cached": 0.11,
       "ctx": "131K",
-      "free": false,
-      "limit": null
-    },
-    {
-      "id": "z-ai/glm-5.2",
-      "provider": "Z Ai",
-      "input": 0.63,
-      "output": 1.9800000000000002,
-      "cached": 0.0945,
-      "ctx": "1.0M",
       "free": false,
       "limit": null
     },
@@ -1911,16 +1931,6 @@
       "input": 0.5700000000000001,
       "output": 2.8499999999999996,
       "cached": 0.095,
-      "ctx": "262K",
-      "free": false,
-      "limit": null
-    },
-    {
-      "id": "qwen/qwen3.5-397b-a17b",
-      "provider": "Qwen",
-      "input": 0.5,
-      "output": 3.5999999999999996,
-      "cached": 0.3,
       "ctx": "262K",
       "free": false,
       "limit": null
@@ -2046,10 +2056,10 @@
       "limit": null
     },
     {
-      "id": "moonshotai/kimi-k2.7-code",
+      "id": "moonshotai/kimi-k2.6",
       "provider": "Moonshotai",
-      "input": 0.67,
-      "output": 3.4,
+      "input": 0.65,
+      "output": 3.41,
       "cached": 0.15,
       "ctx": "262K",
       "free": false,
@@ -2062,6 +2072,16 @@
       "output": 2.96,
       "cached": 0.15,
       "ctx": "256K",
+      "free": false,
+      "limit": null
+    },
+    {
+      "id": "moonshotai/kimi-k2.7-code",
+      "provider": "Moonshotai",
+      "input": 0.71,
+      "output": 3.5,
+      "cached": 0.15,
+      "ctx": "262K",
       "free": false,
       "limit": null
     },
@@ -2136,11 +2156,11 @@
       "limit": null
     },
     {
-      "id": "z-ai/glm-5",
+      "id": "z-ai/glm-5.1",
       "provider": "Z Ai",
-      "input": 0.95,
-      "output": 2.5500000000000003,
-      "cached": 0.19999999999999998,
+      "input": 0.966,
+      "output": 3.036,
+      "cached": 0.1794,
       "ctx": "205K",
       "free": false,
       "limit": null
@@ -2162,16 +2182,6 @@
       "output": 3,
       "cached": 1,
       "ctx": "256K",
-      "free": false,
-      "limit": null
-    },
-    {
-      "id": "moonshotai/kimi-k2.6",
-      "provider": "Moonshotai",
-      "input": 0.95,
-      "output": 4,
-      "cached": 0.16,
-      "ctx": "262K",
       "free": false,
       "limit": null
     },
@@ -2242,16 +2252,6 @@
       "output": 2,
       "cached": 1.5,
       "ctx": "4K",
-      "free": false,
-      "limit": null
-    },
-    {
-      "id": "z-ai/glm-5.1",
-      "provider": "Z Ai",
-      "input": 1.4,
-      "output": 4.4,
-      "cached": 0.26,
-      "ctx": "205K",
       "free": false,
       "limit": null
     },
@@ -2476,26 +2476,6 @@
       "limit": null
     },
     {
-      "id": "openai/gpt-5.6-luna",
-      "provider": "OpenAI",
-      "input": 0.09999999999999999,
-      "output": 0.6,
-      "cached": 0.01,
-      "ctx": "1.1M",
-      "free": false,
-      "limit": null
-    },
-    {
-      "id": "openai/gpt-5.6-luna-pro",
-      "provider": "OpenAI",
-      "input": 0.09999999999999999,
-      "output": 0.6,
-      "cached": 0.01,
-      "ctx": "1.1M",
-      "free": false,
-      "limit": null
-    },
-    {
       "id": "perplexity/sonar",
       "provider": "Perplexity",
       "input": 1,
@@ -2552,56 +2532,6 @@
       "output": 2.5,
       "cached": 0.19999999999999998,
       "ctx": "1M",
-      "free": false,
-      "limit": null
-    },
-    {
-      "id": "openai/gpt-5.6-terra",
-      "provider": "OpenAI",
-      "input": 1,
-      "output": 6,
-      "cached": 0.09999999999999999,
-      "ctx": "1.1M",
-      "free": false,
-      "limit": null
-    },
-    {
-      "id": "openai/gpt-5.6-terra-pro",
-      "provider": "OpenAI",
-      "input": 1,
-      "output": 6,
-      "cached": 0.09999999999999999,
-      "ctx": "1.1M",
-      "free": false,
-      "limit": null
-    },
-    {
-      "id": "google/gemini-3.7-flash:batch",
-      "provider": "Google",
-      "input": 0.1875,
-      "output": 0.9375,
-      "cached": 0.01875,
-      "ctx": "1.0M",
-      "free": false,
-      "limit": null
-    },
-    {
-      "id": "~google/gemini-flash-latest",
-      "provider": "~Google",
-      "input": 0.375,
-      "output": 1.875,
-      "cached": 0.0375,
-      "ctx": "1.0M",
-      "free": false,
-      "limit": null
-    },
-    {
-      "id": "google/gemini-3.7-flash",
-      "provider": "Google",
-      "input": 0.375,
-      "output": 1.875,
-      "cached": 0.0375,
-      "ctx": "1.0M",
       "free": false,
       "limit": null
     },
@@ -2726,7 +2656,27 @@
       "limit": null
     },
     {
+      "id": "openai/gpt-5.6-luna",
+      "provider": "OpenAI",
+      "input": 0.09999999999999999,
+      "output": 0.6,
+      "cached": 0.01,
+      "ctx": "1.1M",
+      "free": false,
+      "limit": null
+    },
+    {
       "id": "openai/gpt-5.6-luna:batch",
+      "provider": "OpenAI",
+      "input": 0.09999999999999999,
+      "output": 0.6,
+      "cached": 0.01,
+      "ctx": "1.1M",
+      "free": false,
+      "limit": null
+    },
+    {
+      "id": "openai/gpt-5.6-luna-pro",
       "provider": "OpenAI",
       "input": 0.09999999999999999,
       "output": 0.6,
@@ -3046,7 +2996,27 @@
       "limit": null
     },
     {
+      "id": "openai/gpt-5.6-terra",
+      "provider": "OpenAI",
+      "input": 1,
+      "output": 6,
+      "cached": 0.09999999999999999,
+      "ctx": "1.1M",
+      "free": false,
+      "limit": null
+    },
+    {
       "id": "openai/gpt-5.6-terra:batch",
+      "provider": "OpenAI",
+      "input": 1,
+      "output": 6,
+      "cached": 0.09999999999999999,
+      "ctx": "1.1M",
+      "free": false,
+      "limit": null
+    },
+    {
+      "id": "openai/gpt-5.6-terra-pro",
       "provider": "OpenAI",
       "input": 1,
       "output": 6,
@@ -3396,6 +3366,16 @@
       "limit": null
     },
     {
+      "id": "google/gemini-3.7-flash:batch",
+      "provider": "Google",
+      "input": 0.1875,
+      "output": 0.9375,
+      "cached": 0.01875,
+      "ctx": "1.0M",
+      "free": false,
+      "limit": null
+    },
+    {
       "id": "google/gemini-3-flash-preview:batch",
       "provider": "Google",
       "input": 0.25,
@@ -3496,7 +3476,27 @@
       "limit": null
     },
     {
+      "id": "~google/gemini-flash-latest",
+      "provider": "~Google",
+      "input": 0.375,
+      "output": 1.875,
+      "cached": 0.0375,
+      "ctx": "1.0M",
+      "free": false,
+      "limit": null
+    },
+    {
       "id": "google/gemini-3.6-flash:batch",
+      "provider": "Google",
+      "input": 0.375,
+      "output": 1.875,
+      "cached": 0.0375,
+      "ctx": "1.0M",
+      "free": false,
+      "limit": null
+    },
+    {
+      "id": "google/gemini-3.7-flash",
       "provider": "Google",
       "input": 0.375,
       "output": 1.875,
