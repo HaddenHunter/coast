@@ -1,9 +1,9 @@
 {
   "_note": "本文件由 GitHub Actions 自动更新。页面只读取本地 pricing.json，不在用户访问时请求远端价格接口。数据源为 OpenRouter 公共 Models API，使用前仍建议核对官网。",
-  "updated": "2026-08-15",
+  "updated": "2026-08-16",
   "source": "OpenRouter Public Models API",
   "sourceUrl": "https://openrouter.ai/api/v1/models?sort=pricing-low-to-high",
-  "count": 412,
+  "count": 413,
   "models": [
     {
       "id": "cohere/north-mini-code:free",
@@ -12,6 +12,16 @@
       "output": 0,
       "cached": 0,
       "ctx": "256K",
+      "free": true,
+      "limit": null
+    },
+    {
+      "id": "dots-studio/dots-3-note-preview:free",
+      "provider": "Dots Studio",
+      "input": 0,
+      "output": 0,
+      "cached": 0,
+      "ctx": "512K",
       "free": true,
       "limit": null
     },
@@ -406,6 +416,26 @@
       "limit": null
     },
     {
+      "id": "deepseek/deepseek-v4-flash",
+      "provider": "DeepSeek",
+      "input": 0.06426,
+      "output": 0.12852,
+      "cached": 0.012852,
+      "ctx": "1.0M",
+      "free": false,
+      "limit": null
+    },
+    {
+      "id": "~deepseek/deepseek-v4-flash-latest",
+      "provider": "~Deepseek",
+      "input": 0.0675,
+      "output": 0.135,
+      "cached": 0.0135,
+      "ctx": "1.0M",
+      "free": false,
+      "limit": null
+    },
+    {
       "id": "meta-llama/llama-3.2-3b-instruct",
       "provider": "Meta Llama",
       "input": 0.049999999999999996,
@@ -436,42 +466,12 @@
       "limit": null
     },
     {
-      "id": "tencent/hy3-preview",
-      "provider": "Tencent",
-      "input": 0.063,
-      "output": 0.21,
-      "cached": 0.020999999999999998,
-      "ctx": "262K",
-      "free": false,
-      "limit": null
-    },
-    {
       "id": "qwen/qwen3.5-flash-02-23",
       "provider": "Qwen",
       "input": 0.065,
       "output": 0.26,
       "cached": 0.065,
       "ctx": "1M",
-      "free": false,
-      "limit": null
-    },
-    {
-      "id": "~deepseek/deepseek-v4-flash-latest",
-      "provider": "~Deepseek",
-      "input": 0.07966,
-      "output": 0.15932,
-      "cached": 0.015932,
-      "ctx": "1.0M",
-      "free": false,
-      "limit": null
-    },
-    {
-      "id": "deepseek/deepseek-v4-flash",
-      "provider": "DeepSeek",
-      "input": 0.07966,
-      "output": 0.15932,
-      "cached": 0.015932,
-      "ctx": "1.0M",
       "free": false,
       "limit": null
     },
@@ -818,9 +818,9 @@
     {
       "id": "qwen/qwen3-30b-a3b",
       "provider": "Qwen",
-      "input": 0.12,
-      "output": 0.5,
-      "cached": 0.12,
+      "input": 0.13,
+      "output": 0.52,
+      "cached": 0.13,
       "ctx": "131K",
       "free": false,
       "limit": null
@@ -981,6 +981,16 @@
       "input": 0.19999999999999998,
       "output": 0.19999999999999998,
       "cached": 0.02,
+      "ctx": "262K",
+      "free": false,
+      "limit": null
+    },
+    {
+      "id": "tencent/hy3-preview",
+      "provider": "Tencent",
+      "input": 0.18,
+      "output": 0.6,
+      "cached": 0.06,
       "ctx": "262K",
       "free": false,
       "limit": null
@@ -1167,6 +1177,16 @@
     },
     {
       "id": "qwen/qwen-plus-2025-07-28",
+      "provider": "Qwen",
+      "input": 0.26,
+      "output": 0.78,
+      "cached": 0.26,
+      "ctx": "1M",
+      "free": false,
+      "limit": null
+    },
+    {
+      "id": "qwen/qwen-plus-2025-07-28:thinking",
       "provider": "Qwen",
       "input": 0.26,
       "output": 0.78,
@@ -1526,16 +1546,6 @@
       "limit": null
     },
     {
-      "id": "qwen/qwen-plus-2025-07-28:thinking",
-      "provider": "Qwen",
-      "input": 0.39999999999999997,
-      "output": 1.2,
-      "cached": 0.39999999999999997,
-      "ctx": "1M",
-      "free": false,
-      "limit": null
-    },
-    {
       "id": "qwen/qwen3.6-plus",
       "provider": "Qwen",
       "input": 0.325,
@@ -1646,6 +1656,26 @@
       "limit": null
     },
     {
+      "id": "z-ai/glm-5.2",
+      "provider": "Z Ai",
+      "input": 0.46199999999999997,
+      "output": 1.452,
+      "cached": 0.0858,
+      "ctx": "1.0M",
+      "free": false,
+      "limit": null
+    },
+    {
+      "id": "minimax/minimax-m1",
+      "provider": "Minimax",
+      "input": 0.39999999999999997,
+      "output": 2.2,
+      "cached": 0.39999999999999997,
+      "ctx": "1M",
+      "free": false,
+      "limit": null
+    },
+    {
       "id": "qwen/qwen3.5-397b-a17b",
       "provider": "Qwen",
       "input": 0.39,
@@ -1672,16 +1702,6 @@
       "output": 1.8199999999999998,
       "cached": 0.45499999999999996,
       "ctx": "131K",
-      "free": false,
-      "limit": null
-    },
-    {
-      "id": "z-ai/glm-5.2",
-      "provider": "Z Ai",
-      "input": 0.49,
-      "output": 1.54,
-      "cached": 0.091,
-      "ctx": "1.0M",
       "free": false,
       "limit": null
     },
@@ -1782,16 +1802,6 @@
       "output": 1,
       "cached": 0.66,
       "ctx": "33K",
-      "free": false,
-      "limit": null
-    },
-    {
-      "id": "minimax/minimax-m1",
-      "provider": "Minimax",
-      "input": 0.55,
-      "output": 2.2,
-      "cached": 0.55,
-      "ctx": "1M",
       "free": false,
       "limit": null
     },
