@@ -1,9 +1,9 @@
 {
   "_note": "本文件由 GitHub Actions 自动更新。页面只读取本地 pricing.json，不在用户访问时请求远端价格接口。数据源为 OpenRouter 公共 Models API，使用前仍建议核对官网。",
-  "updated": "2026-08-21",
+  "updated": "2026-08-22",
   "source": "OpenRouter Public Models API",
   "sourceUrl": "https://openrouter.ai/api/v1/models?sort=pricing-low-to-high",
-  "count": 419,
+  "count": 421,
   "models": [
     {
       "id": "cohere/north-mini-code:free",
@@ -71,7 +71,7 @@
       "input": 0,
       "output": 0,
       "cached": 0,
-      "ctx": "128K",
+      "ctx": "66K",
       "free": true,
       "limit": null
     },
@@ -156,16 +156,6 @@
       "limit": null
     },
     {
-      "id": "openai/gpt-oss-20b:free",
-      "provider": "OpenAI",
-      "input": 0,
-      "output": 0,
-      "cached": 0,
-      "ctx": "131K",
-      "free": true,
-      "limit": null
-    },
-    {
       "id": "poolside/laguna-s-2.1:free",
       "provider": "Poolside",
       "input": 0,
@@ -192,6 +182,26 @@
       "output": 0,
       "cached": 0,
       "ctx": "1.0M",
+      "free": true,
+      "limit": null
+    },
+    {
+      "id": "thinkingmachines/inkling:free",
+      "provider": "Thinkingmachines",
+      "input": 0,
+      "output": 0,
+      "cached": 0,
+      "ctx": "262K",
+      "free": true,
+      "limit": null
+    },
+    {
+      "id": "thinkingmachines/inkling-small:free",
+      "provider": "Thinkingmachines",
+      "input": 0,
+      "output": 0,
+      "cached": 0,
+      "ctx": "262K",
       "free": true,
       "limit": null
     },
@@ -449,8 +459,8 @@
       "id": "~deepseek/deepseek-v4-flash-latest",
       "provider": "~Deepseek",
       "input": 0.065,
-      "output": 0.14,
-      "cached": 0.014,
+      "output": 0.18,
+      "cached": 0.02,
       "ctx": "1.3M",
       "free": false,
       "limit": null
@@ -496,22 +506,42 @@
       "limit": null
     },
     {
+      "id": "deepseek/deepseek-v4-flash",
+      "provider": "DeepSeek",
+      "input": 0.07686,
+      "output": 0.15372,
+      "cached": 0.015372,
+      "ctx": "1.0M",
+      "free": false,
+      "limit": null
+    },
+    {
+      "id": "mistralai/mistral-small-3.2-24b-instruct",
+      "provider": "Mistral",
+      "input": 0.075,
+      "output": 0.19999999999999998,
+      "cached": 0.075,
+      "ctx": "131K",
+      "free": false,
+      "limit": null
+    },
+    {
+      "id": "deepseek/deepseek-v4-flash-0731",
+      "provider": "DeepSeek",
+      "input": 0.08,
+      "output": 0.18,
+      "cached": 0.016,
+      "ctx": "1.3M",
+      "free": false,
+      "limit": null
+    },
+    {
       "id": "qwen/qwen3-coder-30b-a3b-instruct",
       "provider": "Qwen",
       "input": 0.07,
       "output": 0.28,
       "cached": 0.07,
       "ctx": "262K",
-      "free": false,
-      "limit": null
-    },
-    {
-      "id": "deepseek/deepseek-v4-flash",
-      "provider": "DeepSeek",
-      "input": 0.08259999999999999,
-      "output": 0.16519999999999999,
-      "cached": 0.01652,
-      "ctx": "1.0M",
       "free": false,
       "limit": null
     },
@@ -622,16 +652,6 @@
       "output": 0.15,
       "cached": 0.09999999999999999,
       "ctx": "262K",
-      "free": false,
-      "limit": null
-    },
-    {
-      "id": "mistralai/mistral-small-3.2-24b-instruct",
-      "provider": "Mistral",
-      "input": 0.09375,
-      "output": 0.25,
-      "cached": 0.09375,
-      "ctx": "256K",
       "free": false,
       "limit": null
     },
@@ -836,16 +856,6 @@
       "limit": null
     },
     {
-      "id": "deepseek/deepseek-v4-flash-0731",
-      "provider": "DeepSeek",
-      "input": 0.14,
-      "output": 0.28,
-      "cached": 0.028,
-      "ctx": "1.3M",
-      "free": false,
-      "limit": null
-    },
-    {
       "id": "xiaomi/mimo-v2.5",
       "provider": "Xiaomi",
       "input": 0.14,
@@ -936,16 +946,6 @@
       "limit": null
     },
     {
-      "id": "qwen/qwen3-next-80b-a3b-instruct",
-      "provider": "Qwen",
-      "input": 0.09,
-      "output": 1.1,
-      "cached": 0.09,
-      "ctx": "262K",
-      "free": false,
-      "limit": null
-    },
-    {
       "id": "cohere/command-r-08-2024",
       "provider": "Cohere",
       "input": 0.15,
@@ -992,6 +992,16 @@
       "output": 0.6,
       "cached": 0.075,
       "ctx": "128K",
+      "free": false,
+      "limit": null
+    },
+    {
+      "id": "qwen/qwen3-next-80b-a3b-instruct",
+      "provider": "Qwen",
+      "input": 0.09999999999999999,
+      "output": 1.1,
+      "cached": 0.07,
+      "ctx": "262K",
       "free": false,
       "limit": null
     },
@@ -1096,6 +1106,16 @@
       "limit": null
     },
     {
+      "id": "deepseek/deepseek-v3.2",
+      "provider": "DeepSeek",
+      "input": 0.26,
+      "output": 0.38,
+      "cached": 0.13,
+      "ctx": "164K",
+      "free": false,
+      "limit": null
+    },
+    {
       "id": "perceptron/perceptron-mk1",
       "provider": "Perceptron",
       "input": 0.15,
@@ -1136,16 +1156,6 @@
       "limit": null
     },
     {
-      "id": "deepseek/deepseek-v3.2",
-      "provider": "DeepSeek",
-      "input": 0.26899999999999996,
-      "output": 0.39999999999999997,
-      "cached": 0.13449999999999998,
-      "ctx": "164K",
-      "free": false,
-      "limit": null
-    },
-    {
       "id": "minimax/minimax-01",
       "provider": "Minimax",
       "input": 0.19999999999999998,
@@ -1162,16 +1172,6 @@
       "output": 0.41,
       "cached": 0.27,
       "ctx": "164K",
-      "free": false,
-      "limit": null
-    },
-    {
-      "id": "minimax/minimax-m2.5",
-      "provider": "Minimax",
-      "input": 0.22499999999999998,
-      "output": 0.8999999999999999,
-      "cached": 0.06,
-      "ctx": "205K",
       "free": false,
       "limit": null
     },
@@ -1222,16 +1222,6 @@
       "output": 0.78,
       "cached": 0.26,
       "ctx": "1M",
-      "free": false,
-      "limit": null
-    },
-    {
-      "id": "deepseek/deepseek-chat-v3.1",
-      "provider": "DeepSeek",
-      "input": 0.25,
-      "output": 0.95,
-      "cached": 0.13,
-      "ctx": "164K",
       "free": false,
       "limit": null
     },
@@ -1312,6 +1302,16 @@
       "output": 1.25,
       "cached": 0.25,
       "ctx": "262K",
+      "free": false,
+      "limit": null
+    },
+    {
+      "id": "minimax/minimax-m2.5",
+      "provider": "Minimax",
+      "input": 0.27,
+      "output": 1.08,
+      "cached": 0.027,
+      "ctx": "205K",
       "free": false,
       "limit": null
     },
@@ -1636,6 +1636,16 @@
       "limit": null
     },
     {
+      "id": "deepseek/deepseek-v4-flash-vision-exp",
+      "provider": "DeepSeek",
+      "input": 0.44,
+      "output": 1.32,
+      "cached": 0.014,
+      "ctx": "1.0M",
+      "free": false,
+      "limit": null
+    },
+    {
       "id": "mancer/weaver",
       "provider": "Mancer",
       "input": 0.5,
@@ -1706,6 +1716,16 @@
       "limit": null
     },
     {
+      "id": "deepseek/deepseek-v4-pro",
+      "provider": "DeepSeek",
+      "input": 0.532092,
+      "output": 1.064184,
+      "cached": 0.044341,
+      "ctx": "1.0M",
+      "free": false,
+      "limit": null
+    },
+    {
       "id": "mistralai/mistral-large-2512",
       "provider": "Mistral",
       "input": 0.5,
@@ -1752,6 +1772,16 @@
       "output": 2,
       "cached": 0.09999999999999999,
       "ctx": "205K",
+      "free": false,
+      "limit": null
+    },
+    {
+      "id": "deepseek/deepseek-chat-v3.1",
+      "provider": "DeepSeek",
+      "input": 0.55,
+      "output": 1.6500000000000001,
+      "cached": 0.55,
+      "ctx": "164K",
       "free": false,
       "limit": null
     },
@@ -1852,6 +1882,16 @@
       "output": 1.92,
       "cached": 0.12,
       "ctx": "205K",
+      "free": false,
+      "limit": null
+    },
+    {
+      "id": "moonshotai/kimi-k2.6",
+      "provider": "Moonshotai",
+      "input": 0.5605,
+      "output": 2.36,
+      "cached": 0.0944,
+      "ctx": "262K",
       "free": false,
       "limit": null
     },
@@ -2196,16 +2236,6 @@
       "limit": null
     },
     {
-      "id": "moonshotai/kimi-k2.6",
-      "provider": "Moonshotai",
-      "input": 0.95,
-      "output": 4,
-      "cached": 0.16,
-      "ctx": "262K",
-      "free": false,
-      "limit": null
-    },
-    {
       "id": "moonshotai/kimi-k2.7-code:batch",
       "provider": "Moonshotai",
       "input": 0.95,
@@ -2222,16 +2252,6 @@
       "output": 4.05,
       "cached": 0.16,
       "ctx": "1.0M",
-      "free": false,
-      "limit": null
-    },
-    {
-      "id": "deepcogito/cogito-v2.1-671b",
-      "provider": "Deepcogito",
-      "input": 1.25,
-      "output": 1.25,
-      "cached": 1.25,
-      "ctx": "128K",
       "free": false,
       "limit": null
     },
@@ -2336,16 +2356,6 @@
       "limit": null
     },
     {
-      "id": "deepseek/deepseek-v4-pro",
-      "provider": "DeepSeek",
-      "input": 1.5999999999999999,
-      "output": 3.1999999999999997,
-      "cached": 0.135,
-      "ctx": "1.0M",
-      "free": false,
-      "limit": null
-    },
-    {
       "id": "mistralai/mistral-medium-3-5",
       "provider": "Mistral",
       "input": 1.5,
@@ -2402,6 +2412,16 @@
       "output": 6,
       "cached": 0.25,
       "ctx": "1M",
+      "free": false,
+      "limit": null
+    },
+    {
+      "id": "meta/muse-spark-1.2-contributor",
+      "provider": "Meta",
+      "input": 0.09999999999999999,
+      "output": 0.19999999999999998,
+      "cached": 0.002,
+      "ctx": "1.0M",
       "free": false,
       "limit": null
     },
@@ -3016,6 +3036,26 @@
       "limit": null
     },
     {
+      "id": "openai/gpt-5.6-sol:batch",
+      "provider": "OpenAI",
+      "input": 1,
+      "output": 5,
+      "cached": 0.09999999999999999,
+      "ctx": "1.1M",
+      "free": false,
+      "limit": null
+    },
+    {
+      "id": "openai/gpt-5.6-sol-pro:batch",
+      "provider": "OpenAI",
+      "input": 1,
+      "output": 5,
+      "cached": 0.09999999999999999,
+      "ctx": "1.1M",
+      "free": false,
+      "limit": null
+    },
+    {
       "id": "openai/o3-mini",
       "provider": "OpenAI",
       "input": 1.1,
@@ -3097,26 +3137,6 @@
     },
     {
       "id": "openai/gpt-5.4:batch",
-      "provider": "OpenAI",
-      "input": 1.25,
-      "output": 7.5,
-      "cached": 0.125,
-      "ctx": "1.1M",
-      "free": false,
-      "limit": null
-    },
-    {
-      "id": "openai/gpt-5.6-sol:batch",
-      "provider": "OpenAI",
-      "input": 1.25,
-      "output": 7.5,
-      "cached": 0.125,
-      "ctx": "1.1M",
-      "free": false,
-      "limit": null
-    },
-    {
-      "id": "openai/gpt-5.6-sol-pro:batch",
       "provider": "OpenAI",
       "input": 1.25,
       "output": 7.5,
@@ -3226,6 +3246,16 @@
       "limit": null
     },
     {
+      "id": "~openai/gpt-latest",
+      "provider": "~Openai",
+      "input": 2,
+      "output": 10,
+      "cached": 0.19999999999999998,
+      "ctx": "1.1M",
+      "free": false,
+      "limit": null
+    },
+    {
       "id": "anthropic/claude-sonnet-5",
       "provider": "Anthropic",
       "input": 2,
@@ -3252,6 +3282,26 @@
       "output": 30,
       "cached": 10,
       "ctx": "128K",
+      "free": false,
+      "limit": null
+    },
+    {
+      "id": "openai/gpt-5.6-sol",
+      "provider": "OpenAI",
+      "input": 2,
+      "output": 10,
+      "cached": 0.19999999999999998,
+      "ctx": "1.1M",
+      "free": false,
+      "limit": null
+    },
+    {
+      "id": "openai/gpt-5.6-sol-pro",
+      "provider": "OpenAI",
+      "input": 2,
+      "output": 10,
+      "cached": 0.19999999999999998,
+      "ctx": "1.1M",
       "free": false,
       "limit": null
     },
@@ -3366,16 +3416,6 @@
       "limit": null
     },
     {
-      "id": "~openai/gpt-latest",
-      "provider": "~Openai",
-      "input": 2.5,
-      "output": 15,
-      "cached": 0.25,
-      "ctx": "1.1M",
-      "free": false,
-      "limit": null
-    },
-    {
       "id": "openai/gpt-5.4",
       "provider": "OpenAI",
       "input": 2.5,
@@ -3387,26 +3427,6 @@
     },
     {
       "id": "openai/gpt-5.5:batch",
-      "provider": "OpenAI",
-      "input": 2.5,
-      "output": 15,
-      "cached": 0.25,
-      "ctx": "1.1M",
-      "free": false,
-      "limit": null
-    },
-    {
-      "id": "openai/gpt-5.6-sol",
-      "provider": "OpenAI",
-      "input": 2.5,
-      "output": 15,
-      "cached": 0.25,
-      "ctx": "1.1M",
-      "free": false,
-      "limit": null
-    },
-    {
-      "id": "openai/gpt-5.6-sol-pro",
       "provider": "OpenAI",
       "input": 2.5,
       "output": 15,
