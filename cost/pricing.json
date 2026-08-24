@@ -1,6 +1,6 @@
 {
   "_note": "本文件由 GitHub Actions 自动更新。页面只读取本地 pricing.json，不在用户访问时请求远端价格接口。数据源为 OpenRouter 公共 Models API，使用前仍建议核对官网。",
-  "updated": "2026-08-23",
+  "updated": "2026-08-24",
   "source": "OpenRouter Public Models API",
   "sourceUrl": "https://openrouter.ai/api/v1/models?sort=pricing-low-to-high",
   "count": 422,
@@ -316,6 +316,16 @@
       "limit": null
     },
     {
+      "id": "~deepseek/deepseek-v4-flash-latest",
+      "provider": "~Deepseek",
+      "input": 0.04,
+      "output": 0.08,
+      "cached": 0.008,
+      "ctx": "1.3M",
+      "free": false,
+      "limit": null
+    },
+    {
       "id": "amazon/nova-micro-v1",
       "provider": "Amazon",
       "input": 0.035,
@@ -406,16 +416,6 @@
       "limit": null
     },
     {
-      "id": "deepseek/deepseek-v4-flash",
-      "provider": "DeepSeek",
-      "input": 0.05446,
-      "output": 0.10892,
-      "cached": 0.010891999999999999,
-      "ctx": "1.0M",
-      "free": false,
-      "limit": null
-    },
-    {
       "id": "gryphe/mythomax-l2-13b",
       "provider": "Gryphe",
       "input": 0.06,
@@ -436,12 +436,12 @@
       "limit": null
     },
     {
-      "id": "~deepseek/deepseek-v4-flash-latest",
-      "provider": "~Deepseek",
-      "input": 0.055,
-      "output": 0.14,
-      "cached": 0.01,
-      "ctx": "1.3M",
+      "id": "deepseek/deepseek-v4-flash",
+      "provider": "DeepSeek",
+      "input": 0.0574,
+      "output": 0.1148,
+      "cached": 0.011479999999999999,
+      "ctx": "1.0M",
       "free": false,
       "limit": null
     },
@@ -522,16 +522,6 @@
       "output": 0.19999999999999998,
       "cached": 0.075,
       "ctx": "131K",
-      "free": false,
-      "limit": null
-    },
-    {
-      "id": "deepseek/deepseek-v4-flash-0731",
-      "provider": "DeepSeek",
-      "input": 0.08,
-      "output": 0.18,
-      "cached": 0.016,
-      "ctx": "1.3M",
       "free": false,
       "limit": null
     },
@@ -862,6 +852,16 @@
       "output": 0.15,
       "cached": 0.015,
       "ctx": "262K",
+      "free": false,
+      "limit": null
+    },
+    {
+      "id": "deepseek/deepseek-v4-flash-0731",
+      "provider": "DeepSeek",
+      "input": 0.14,
+      "output": 0.28,
+      "cached": 0.028,
+      "ctx": "1.3M",
       "free": false,
       "limit": null
     },
@@ -1216,6 +1216,16 @@
       "limit": null
     },
     {
+      "id": "minimax/minimax-m2.7",
+      "provider": "Minimax",
+      "input": 0.24,
+      "output": 0.96,
+      "cached": 0.048,
+      "ctx": "205K",
+      "free": false,
+      "limit": null
+    },
+    {
       "id": "qwen/qwen-plus",
       "provider": "Qwen",
       "input": 0.26,
@@ -1456,16 +1466,6 @@
       "limit": null
     },
     {
-      "id": "minimax/minimax-m2.7",
-      "provider": "Minimax",
-      "input": 0.3,
-      "output": 1.2,
-      "cached": 0.06,
-      "ctx": "205K",
-      "free": false,
-      "limit": null
-    },
-    {
       "id": "minimax/minimax-m3",
       "provider": "Minimax",
       "input": 0.3,
@@ -1586,16 +1586,6 @@
       "limit": null
     },
     {
-      "id": "deepseek/deepseek-v4-pro",
-      "provider": "DeepSeek",
-      "input": 0.413772,
-      "output": 0.827544,
-      "cached": 0.034481000000000005,
-      "ctx": "1.0M",
-      "free": false,
-      "limit": null
-    },
-    {
       "id": "meta/muse-glimmer-30b",
       "provider": "Meta",
       "input": 0.35,
@@ -1706,16 +1696,6 @@
       "limit": null
     },
     {
-      "id": "qwen/qwen3.5-397b-a17b",
-      "provider": "Qwen",
-      "input": 0.39,
-      "output": 2.34,
-      "cached": 0.39,
-      "ctx": "262K",
-      "free": false,
-      "limit": null
-    },
-    {
       "id": "thedrummer/skyfall-36b-v2",
       "provider": "Thedrummer",
       "input": 0.55,
@@ -1726,12 +1706,32 @@
       "limit": null
     },
     {
+      "id": "deepseek/deepseek-v4-pro",
+      "provider": "DeepSeek",
+      "input": 0.526176,
+      "output": 1.052352,
+      "cached": 0.043848000000000005,
+      "ctx": "1.0M",
+      "free": false,
+      "limit": null
+    },
+    {
       "id": "qwen/qwen3-235b-a22b",
       "provider": "Qwen",
       "input": 0.45499999999999996,
       "output": 1.8199999999999998,
       "cached": 0.45499999999999996,
       "ctx": "131K",
+      "free": false,
+      "limit": null
+    },
+    {
+      "id": "qwen/qwen3.6-27b",
+      "provider": "Qwen",
+      "input": 0.32,
+      "output": 3.1999999999999997,
+      "cached": 0.32,
+      "ctx": "262K",
       "free": false,
       "limit": null
     },
@@ -1976,6 +1976,16 @@
       "limit": null
     },
     {
+      "id": "qwen/qwen3.5-397b-a17b",
+      "provider": "Qwen",
+      "input": 0.5,
+      "output": 3.5999999999999996,
+      "cached": 0.3,
+      "ctx": "262K",
+      "free": false,
+      "limit": null
+    },
+    {
       "id": "arcee-ai/virtuoso-large",
       "provider": "Arcee Ai",
       "input": 0.75,
@@ -2072,16 +2082,6 @@
       "output": 3.5999999999999996,
       "cached": 0.19999999999999998,
       "ctx": "512K",
-      "free": false,
-      "limit": null
-    },
-    {
-      "id": "qwen/qwen3.6-27b",
-      "provider": "Qwen",
-      "input": 0.6,
-      "output": 3.5999999999999996,
-      "cached": 0.12,
-      "ctx": "262K",
       "free": false,
       "limit": null
     },
