@@ -1,9 +1,9 @@
 {
   "_note": "本文件由 GitHub Actions 自动更新。页面只读取本地 pricing.json，不在用户访问时请求远端价格接口。数据源为 OpenRouter 公共 Models API，使用前仍建议核对官网。",
-  "updated": "2026-08-24",
+  "updated": "2026-08-25",
   "source": "OpenRouter Public Models API",
   "sourceUrl": "https://openrouter.ai/api/v1/models?sort=pricing-low-to-high",
-  "count": 422,
+  "count": 418,
   "models": [
     {
       "id": "cohere/north-mini-code:free",
@@ -76,12 +76,12 @@
       "limit": null
     },
     {
-      "id": "nvidia/nemotron-3-nano-30b-a3b:free",
-      "provider": "Nvidia",
+      "id": "minimax/minimax-m2.7:free",
+      "provider": "Minimax",
       "input": 0,
       "output": 0,
       "cached": 0,
-      "ctx": "256K",
+      "ctx": "197K",
       "free": true,
       "limit": null
     },
@@ -136,26 +136,6 @@
       "limit": null
     },
     {
-      "id": "nvidia/nemotron-nano-12b-v2-vl:free",
-      "provider": "Nvidia",
-      "input": 0,
-      "output": 0,
-      "cached": 0,
-      "ctx": "128K",
-      "free": true,
-      "limit": null
-    },
-    {
-      "id": "nvidia/nemotron-nano-9b-v2:free",
-      "provider": "Nvidia",
-      "input": 0,
-      "output": 0,
-      "cached": 0,
-      "ctx": "128K",
-      "free": true,
-      "limit": null
-    },
-    {
       "id": "poolside/laguna-s-2.1:free",
       "provider": "Poolside",
       "input": 0,
@@ -191,7 +171,7 @@
       "input": 0,
       "output": 0,
       "cached": 0,
-      "ctx": "262K",
+      "ctx": "1.0M",
       "free": true,
       "limit": null
     },
@@ -201,7 +181,7 @@
       "input": 0,
       "output": 0,
       "cached": 0,
-      "ctx": "262K",
+      "ctx": "1.0M",
       "free": true,
       "limit": null
     },
@@ -213,16 +193,6 @@
       "cached": 0,
       "ctx": "256K",
       "free": true,
-      "limit": null
-    },
-    {
-      "id": "inclusionai/ling-2.6-flash",
-      "provider": "Inclusionai",
-      "input": 0.01,
-      "output": 0.03,
-      "cached": 0.002,
-      "ctx": "262K",
-      "free": false,
       "limit": null
     },
     {
@@ -276,6 +246,16 @@
       "limit": null
     },
     {
+      "id": "~deepseek/deepseek-v4-flash-latest",
+      "provider": "~Deepseek",
+      "input": 0.035,
+      "output": 0.075,
+      "cached": 0.008,
+      "ctx": "1.3M",
+      "free": false,
+      "limit": null
+    },
+    {
       "id": "openai/gpt-oss-20b",
       "provider": "OpenAI",
       "input": 0.03,
@@ -312,16 +292,6 @@
       "output": 0.201,
       "cached": 0.027,
       "ctx": "60K",
-      "free": false,
-      "limit": null
-    },
-    {
-      "id": "~deepseek/deepseek-v4-flash-latest",
-      "provider": "~Deepseek",
-      "input": 0.04,
-      "output": 0.08,
-      "cached": 0.008,
-      "ctx": "1.3M",
       "free": false,
       "limit": null
     },
@@ -432,16 +402,6 @@
       "output": 0.19305,
       "cached": 0.04815,
       "ctx": "262K",
-      "free": false,
-      "limit": null
-    },
-    {
-      "id": "deepseek/deepseek-v4-flash",
-      "provider": "DeepSeek",
-      "input": 0.0574,
-      "output": 0.1148,
-      "cached": 0.011479999999999999,
-      "ctx": "1.0M",
       "free": false,
       "limit": null
     },
@@ -606,6 +566,16 @@
       "limit": null
     },
     {
+      "id": "deepseek/deepseek-v4-flash",
+      "provider": "DeepSeek",
+      "input": 0.088606,
+      "output": 0.177212,
+      "cached": 0.017721200000000003,
+      "ctx": "1.0M",
+      "free": false,
+      "limit": null
+    },
+    {
       "id": "poolside/laguna-s-2.1",
       "provider": "Poolside",
       "input": 0.09,
@@ -761,26 +731,6 @@
       "input": 0.09999999999999999,
       "output": 0.33999999999999997,
       "cached": 0.09999999999999999,
-      "ctx": "262K",
-      "free": false,
-      "limit": null
-    },
-    {
-      "id": "inclusionai/ling-2.6-1t",
-      "provider": "Inclusionai",
-      "input": 0.075,
-      "output": 0.625,
-      "cached": 0.015,
-      "ctx": "262K",
-      "free": false,
-      "limit": null
-    },
-    {
-      "id": "inclusionai/ring-2.6-1t",
-      "provider": "Inclusionai",
-      "input": 0.075,
-      "output": 0.625,
-      "cached": 0.015,
       "ctx": "262K",
       "free": false,
       "limit": null
@@ -1096,16 +1046,6 @@
       "limit": null
     },
     {
-      "id": "deepseek/deepseek-v4-flash-vision-exp",
-      "provider": "DeepSeek",
-      "input": 0.22,
-      "output": 0.66,
-      "cached": 0.007,
-      "ctx": "1.0M",
-      "free": false,
-      "limit": null
-    },
-    {
       "id": "cognitivecomputations/dolphin-mistral-24b-venice-edition",
       "provider": "Cognitivecomputations",
       "input": 0.19999999999999998,
@@ -1212,16 +1152,6 @@
       "output": 0.75,
       "cached": 0.024999999999999998,
       "ctx": "128K",
-      "free": false,
-      "limit": null
-    },
-    {
-      "id": "minimax/minimax-m2.7",
-      "provider": "Minimax",
-      "input": 0.24,
-      "output": 0.96,
-      "cached": 0.048,
-      "ctx": "205K",
       "free": false,
       "limit": null
     },
@@ -1466,6 +1396,16 @@
       "limit": null
     },
     {
+      "id": "minimax/minimax-m2.7",
+      "provider": "Minimax",
+      "input": 0.3,
+      "output": 1.2,
+      "cached": 0.06,
+      "ctx": "205K",
+      "free": false,
+      "limit": null
+    },
+    {
       "id": "minimax/minimax-m3",
       "provider": "Minimax",
       "input": 0.3,
@@ -1561,7 +1501,7 @@
       "input": 0.22999999999999998,
       "output": 2.3,
       "cached": 0.22999999999999998,
-      "ctx": "262K",
+      "ctx": "131K",
       "free": false,
       "limit": null
     },
@@ -1656,6 +1596,16 @@
       "limit": null
     },
     {
+      "id": "deepseek/deepseek-v4-flash-vision-exp",
+      "provider": "DeepSeek",
+      "input": 0.44,
+      "output": 1.32,
+      "cached": 0.014,
+      "ctx": "1.0M",
+      "free": false,
+      "limit": null
+    },
+    {
       "id": "mancer/weaver",
       "provider": "Mancer",
       "input": 0.5,
@@ -1706,16 +1656,6 @@
       "limit": null
     },
     {
-      "id": "deepseek/deepseek-v4-pro",
-      "provider": "DeepSeek",
-      "input": 0.526176,
-      "output": 1.052352,
-      "cached": 0.043848000000000005,
-      "ctx": "1.0M",
-      "free": false,
-      "limit": null
-    },
-    {
       "id": "qwen/qwen3-235b-a22b",
       "provider": "Qwen",
       "input": 0.45499999999999996,
@@ -1756,11 +1696,11 @@
       "limit": null
     },
     {
-      "id": "moonshotai/kimi-k2.5",
-      "provider": "Moonshotai",
-      "input": 0.44999999999999996,
-      "output": 2.25,
-      "cached": 0.07,
+      "id": "mistralai/devstral-2512",
+      "provider": "Mistral",
+      "input": 0.44,
+      "output": 2.2,
+      "cached": 0.044,
       "ctx": "262K",
       "free": false,
       "limit": null
@@ -2006,6 +1946,16 @@
       "limit": null
     },
     {
+      "id": "moonshotai/kimi-k2.5",
+      "provider": "Moonshotai",
+      "input": 0.6,
+      "output": 3,
+      "cached": 0.09999999999999999,
+      "ctx": "262K",
+      "free": false,
+      "limit": null
+    },
+    {
       "id": "qwen/qwen2.5-vl-72b-instruct",
       "provider": "Qwen",
       "input": 0.7999999999999999,
@@ -2032,6 +1982,16 @@
       "output": 0.85,
       "cached": 0.85,
       "ctx": "131K",
+      "free": false,
+      "limit": null
+    },
+    {
+      "id": "deepseek/deepseek-v4-pro",
+      "provider": "DeepSeek",
+      "input": 0.790308,
+      "output": 1.580616,
+      "cached": 0.065859,
+      "ctx": "1.0M",
       "free": false,
       "limit": null
     },
@@ -2110,7 +2070,7 @@
       "provider": "Moonshotai",
       "input": 0.67,
       "output": 3.4,
-      "cached": 0.16999999999999998,
+      "cached": 0.19,
       "ctx": "262K",
       "free": false,
       "limit": null
@@ -2206,16 +2166,6 @@
       "limit": null
     },
     {
-      "id": "z-ai/glm-5.2",
-      "provider": "Z Ai",
-      "input": 0.966,
-      "output": 3.036,
-      "cached": 0.1932,
-      "ctx": "1.0M",
-      "free": false,
-      "limit": null
-    },
-    {
       "id": "nousresearch/hermes-4-405b",
       "provider": "Nousresearch",
       "input": 1,
@@ -2258,9 +2208,9 @@
     {
       "id": "thinkingmachines/inkling",
       "provider": "Thinkingmachines",
-      "input": 1,
+      "input": 0.95,
       "output": 4.05,
-      "cached": 0.16999999999999998,
+      "cached": 0.16,
       "ctx": "1.0M",
       "free": false,
       "limit": null
@@ -2281,6 +2231,16 @@
       "input": 1.122,
       "output": 3.366,
       "cached": 0.037399999999999996,
+      "ctx": "1.0M",
+      "free": false,
+      "limit": null
+    },
+    {
+      "id": "z-ai/glm-5.2",
+      "provider": "Z Ai",
+      "input": 1.19,
+      "output": 3.74,
+      "cached": 0.221,
       "ctx": "1.0M",
       "free": false,
       "limit": null
@@ -2536,16 +2496,6 @@
       "limit": null
     },
     {
-      "id": "~moonshotai/kimi-latest",
-      "provider": "~Moonshotai",
-      "input": 2.6,
-      "output": 13,
-      "cached": 0.29,
-      "ctx": "1.0M",
-      "free": false,
-      "limit": null
-    },
-    {
       "id": "meta/muse-spark-1.1",
       "provider": "Meta",
       "input": 1.25,
@@ -2561,6 +2511,16 @@
       "input": 1.25,
       "output": 4.25,
       "cached": 0.15,
+      "ctx": "1.0M",
+      "free": false,
+      "limit": null
+    },
+    {
+      "id": "~moonshotai/kimi-latest",
+      "provider": "~Moonshotai",
+      "input": 2.8,
+      "output": 14,
+      "cached": 0.29,
       "ctx": "1.0M",
       "free": false,
       "limit": null
