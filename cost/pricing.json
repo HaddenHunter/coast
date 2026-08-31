@@ -1,6 +1,6 @@
 {
   "_note": "本文件由 GitHub Actions 自动更新。页面只读取本地 pricing.json，不在用户访问时请求远端价格接口。数据源为 OpenRouter 公共 Models API，使用前仍建议核对官网。",
-  "updated": "2026-08-30",
+  "updated": "2026-08-31",
   "source": "OpenRouter Public Models API",
   "sourceUrl": "https://openrouter.ai/api/v1/models?sort=pricing-low-to-high",
   "count": 396,
@@ -290,7 +290,7 @@
       "provider": "~Deepseek",
       "input": 0.03,
       "output": 0.16,
-      "cached": 0.01,
+      "cached": 0.013000000000000001,
       "ctx": "1.3M",
       "free": false,
       "limit": null
@@ -506,16 +506,6 @@
       "limit": null
     },
     {
-      "id": "deepseek/deepseek-v4-flash",
-      "provider": "DeepSeek",
-      "input": 0.08064,
-      "output": 0.16128,
-      "cached": 0.016128,
-      "ctx": "1.0M",
-      "free": false,
-      "limit": null
-    },
-    {
       "id": "qwen/qwen3-coder-30b-a3b-instruct",
       "provider": "Qwen",
       "input": 0.07,
@@ -602,6 +592,16 @@
       "output": 0.3,
       "cached": 0.0375,
       "ctx": "131K",
+      "free": false,
+      "limit": null
+    },
+    {
+      "id": "deepseek/deepseek-v4-flash",
+      "provider": "DeepSeek",
+      "input": 0.088606,
+      "output": 0.177212,
+      "cached": 0.017721200000000003,
+      "ctx": "1.0M",
       "free": false,
       "limit": null
     },
@@ -1086,32 +1086,22 @@
       "limit": null
     },
     {
-      "id": "qwen/qwen3-next-80b-a3b-thinking",
-      "provider": "Qwen",
-      "input": 0.15,
-      "output": 1.2,
-      "cached": 0.15,
-      "ctx": "262K",
-      "free": false,
-      "limit": null
-    },
-    {
       "id": "meta-llama/llama-4-maverick",
       "provider": "Meta Llama",
       "input": 0.19999999999999998,
-      "output": 0.7999999999999999,
+      "output": 0.696,
       "cached": 0.19999999999999998,
       "ctx": "1.0M",
       "free": false,
       "limit": null
     },
     {
-      "id": "deepseek/deepseek-v4-flash-vision-exp",
-      "provider": "DeepSeek",
-      "input": 0.22,
-      "output": 0.66,
-      "cached": 0.007,
-      "ctx": "1.0M",
+      "id": "qwen/qwen3-next-80b-a3b-thinking",
+      "provider": "Qwen",
+      "input": 0.15,
+      "output": 1.2,
+      "cached": 0.15,
+      "ctx": "262K",
       "free": false,
       "limit": null
     },
@@ -1666,16 +1656,6 @@
       "limit": null
     },
     {
-      "id": "deepseek/deepseek-v4-pro",
-      "provider": "DeepSeek",
-      "input": 0.457794,
-      "output": 0.915588,
-      "cached": 0.0381495,
-      "ctx": "1.0M",
-      "free": false,
-      "limit": null
-    },
-    {
       "id": "amazon/nova-2-lite-v1",
       "provider": "Amazon",
       "input": 0.3,
@@ -1691,6 +1671,16 @@
       "input": 0.44999999999999996,
       "output": 1.2,
       "cached": 0.09999999999999999,
+      "ctx": "1.0M",
+      "free": false,
+      "limit": null
+    },
+    {
+      "id": "deepseek/deepseek-v4-flash-vision-exp",
+      "provider": "DeepSeek",
+      "input": 0.44,
+      "output": 1.32,
+      "cached": 0.014,
       "ctx": "1.0M",
       "free": false,
       "limit": null
@@ -1712,6 +1702,16 @@
       "output": 1.75,
       "cached": 0.08,
       "ctx": "205K",
+      "free": false,
+      "limit": null
+    },
+    {
+      "id": "mistralai/devstral-2512",
+      "provider": "Mistral",
+      "input": 0.39999999999999997,
+      "output": 2,
+      "cached": 0.04,
+      "ctx": "262K",
       "free": false,
       "limit": null
     },
@@ -1826,11 +1826,11 @@
       "limit": null
     },
     {
-      "id": "mistralai/devstral-2512",
-      "provider": "Mistral",
-      "input": 0.44,
-      "output": 2.2,
-      "cached": 0.044,
+      "id": "moonshotai/kimi-k2.5",
+      "provider": "Moonshotai",
+      "input": 0.44999999999999996,
+      "output": 2.25,
+      "cached": 0.07,
       "ctx": "262K",
       "free": false,
       "limit": null
@@ -2056,32 +2056,12 @@
       "limit": null
     },
     {
-      "id": "deepseek/deepseek-v4-pro-0813",
-      "provider": "DeepSeek",
-      "input": 0.66,
-      "output": 1.9800000000000002,
-      "cached": 0.022,
-      "ctx": "1.0M",
-      "free": false,
-      "limit": null
-    },
-    {
       "id": "deepseek/deepseek-r1-distill-llama-70b",
       "provider": "DeepSeek",
       "input": 0.7999999999999999,
       "output": 0.7999999999999999,
       "cached": 0.7999999999999999,
       "ctx": "8K",
-      "free": false,
-      "limit": null
-    },
-    {
-      "id": "moonshotai/kimi-k2.5",
-      "provider": "Moonshotai",
-      "input": 0.6,
-      "output": 3,
-      "cached": 0.09999999999999999,
-      "ctx": "262K",
       "free": false,
       "limit": null
     },
@@ -2406,6 +2386,16 @@
       "limit": null
     },
     {
+      "id": "deepseek/deepseek-v4-pro-0813",
+      "provider": "DeepSeek",
+      "input": 1.32,
+      "output": 3.9600000000000004,
+      "cached": 0.044,
+      "ctx": "1.0M",
+      "free": false,
+      "limit": null
+    },
+    {
       "id": "deepseek/deepseek-v4-pro-0813:batch",
       "provider": "DeepSeek",
       "input": 1.32,
@@ -2432,6 +2422,16 @@
       "output": 4.425,
       "cached": 0.295,
       "ctx": "1M",
+      "free": false,
+      "limit": null
+    },
+    {
+      "id": "deepseek/deepseek-v4-pro",
+      "provider": "DeepSeek",
+      "input": 1.5999999999999999,
+      "output": 3.1999999999999997,
+      "cached": 0.135,
+      "ctx": "1.0M",
       "free": false,
       "limit": null
     },
@@ -2810,7 +2810,7 @@
       "provider": "OpenAI",
       "input": 0.09999999999999999,
       "output": 0.39999999999999997,
-      "cached": 0.03,
+      "cached": 0.024999999999999998,
       "ctx": "1.0M",
       "free": false,
       "limit": null
