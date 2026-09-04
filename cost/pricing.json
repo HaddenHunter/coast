@@ -1,9 +1,9 @@
 {
   "_note": "本文件由 GitHub Actions 自动更新。页面只读取本地 pricing.json，不在用户访问时请求远端价格接口。数据源为 OpenRouter 公共 Models API，使用前仍建议核对官网。",
-  "updated": "2026-09-03",
+  "updated": "2026-09-04",
   "source": "OpenRouter Public Models API",
   "sourceUrl": "https://openrouter.ai/api/v1/models?sort=pricing-low-to-high",
-  "count": 424,
+  "count": 427,
   "models": [
     {
       "id": "cohere/north-mini-code:free",
@@ -451,6 +451,16 @@
       "input": 0.06,
       "output": 0.12,
       "cached": 0.03,
+      "ctx": "262K",
+      "free": false,
+      "limit": null
+    },
+    {
+      "id": "inclusionai/ling-3.0-flash-fin",
+      "provider": "Inclusionai",
+      "input": 0.06,
+      "output": 0.18,
+      "cached": 0.012,
       "ctx": "262K",
       "free": false,
       "limit": null
@@ -1076,6 +1086,16 @@
       "limit": null
     },
     {
+      "id": "nvidia/nemotron-3.5-content-safety",
+      "provider": "Nvidia",
+      "input": 0.19999999999999998,
+      "output": 0.19999999999999998,
+      "cached": 0.19999999999999998,
+      "ctx": "131K",
+      "free": false,
+      "limit": null
+    },
+    {
       "id": "tencent/hy3-preview",
       "provider": "Tencent",
       "input": 0.18,
@@ -1206,16 +1226,6 @@
       "limit": null
     },
     {
-      "id": "qwen/qwen2.5-vl-72b-instruct",
-      "provider": "Qwen",
-      "input": 0.25,
-      "output": 0.75,
-      "cached": 0.25,
-      "ctx": "128K",
-      "free": false,
-      "limit": null
-    },
-    {
       "id": "arcee-ai/trinity-large-thinking",
       "provider": "Arcee Ai",
       "input": 0.25,
@@ -1242,16 +1252,6 @@
       "output": 0.78,
       "cached": 0.26,
       "ctx": "1M",
-      "free": false,
-      "limit": null
-    },
-    {
-      "id": "deepseek/deepseek-chat-v3.1",
-      "provider": "DeepSeek",
-      "input": 0.25,
-      "output": 0.95,
-      "cached": 0.13,
-      "ctx": "164K",
       "free": false,
       "limit": null
     },
@@ -1302,16 +1302,6 @@
       "output": 1.02,
       "cached": 0.255,
       "ctx": "205K",
-      "free": false,
-      "limit": null
-    },
-    {
-      "id": "deepseek/deepseek-chat",
-      "provider": "DeepSeek",
-      "input": 0.2574,
-      "output": 1.0287,
-      "cached": 0.2574,
-      "ctx": "164K",
       "free": false,
       "limit": null
     },
@@ -1416,12 +1406,32 @@
       "limit": null
     },
     {
+      "id": "deepseek/deepseek-chat",
+      "provider": "DeepSeek",
+      "input": 0.32,
+      "output": 0.8899999999999999,
+      "cached": 0.32,
+      "ctx": "164K",
+      "free": false,
+      "limit": null
+    },
+    {
       "id": "meta/muse-glimmer-30b",
       "provider": "Meta",
       "input": 0.3,
       "output": 1.1,
       "cached": 0.04,
       "ctx": "131K",
+      "free": false,
+      "limit": null
+    },
+    {
+      "id": "undi95/remm-slerp-l2-13b",
+      "provider": "Undi95",
+      "input": 0.35,
+      "output": 0.65,
+      "cached": 0.35,
+      "ctx": "6K",
       "free": false,
       "limit": null
     },
@@ -1626,16 +1636,6 @@
       "limit": null
     },
     {
-      "id": "undi95/remm-slerp-l2-13b",
-      "provider": "Undi95",
-      "input": 0.44999999999999996,
-      "output": 0.65,
-      "cached": 0.44999999999999996,
-      "ctx": "6K",
-      "free": false,
-      "limit": null
-    },
-    {
       "id": "qwen/qwen3.6-plus",
       "provider": "Qwen",
       "input": 0.325,
@@ -1806,22 +1806,22 @@
       "limit": null
     },
     {
-      "id": "qwen/qwen3.8-27b",
-      "provider": "Qwen",
-      "input": 0.425,
-      "output": 2.5500000000000003,
-      "cached": 0.08499999999999999,
-      "ctx": "1M",
-      "free": false,
-      "limit": null
-    },
-    {
       "id": "microsoft/wizardlm-2-8x22b",
       "provider": "Microsoft",
       "input": 0.62,
       "output": 0.62,
       "cached": 0.62,
       "ctx": "66K",
+      "free": false,
+      "limit": null
+    },
+    {
+      "id": "deepseek/deepseek-chat-v3.1",
+      "provider": "DeepSeek",
+      "input": 0.55,
+      "output": 1.6500000000000001,
+      "cached": 0.55,
+      "ctx": "164K",
       "free": false,
       "limit": null
     },
@@ -1842,6 +1842,16 @@
       "output": 0.65,
       "cached": 0.65,
       "ctx": "8K",
+      "free": false,
+      "limit": null
+    },
+    {
+      "id": "qwen/qwen3.8-27b",
+      "provider": "Qwen",
+      "input": 0.42,
+      "output": 3,
+      "cached": 0.08499999999999999,
+      "ctx": "1M",
       "free": false,
       "limit": null
     },
@@ -1976,16 +1986,6 @@
       "limit": null
     },
     {
-      "id": "nvidia/nemotron-3-ultra-550b-a55b",
-      "provider": "Nvidia",
-      "input": 0.6,
-      "output": 2.4,
-      "cached": 0.12,
-      "ctx": "262K",
-      "free": false,
-      "limit": null
-    },
-    {
       "id": "openai/gpt-audio-mini",
       "provider": "OpenAI",
       "input": 0.6,
@@ -2026,6 +2026,16 @@
       "limit": null
     },
     {
+      "id": "qwen/qwen2.5-vl-72b-instruct",
+      "provider": "Qwen",
+      "input": 0.7999999999999999,
+      "output": 1,
+      "cached": 0.39999999999999997,
+      "ctx": "128K",
+      "free": false,
+      "limit": null
+    },
+    {
       "id": "qwen/qwen3.5-397b-a17b",
       "provider": "Qwen",
       "input": 0.55,
@@ -2052,6 +2062,16 @@
       "output": 0.85,
       "cached": 0.85,
       "ctx": "131K",
+      "free": false,
+      "limit": null
+    },
+    {
+      "id": "nvidia/nemotron-3-ultra-550b-a55b",
+      "provider": "Nvidia",
+      "input": 0.625,
+      "output": 3.125,
+      "cached": 0.1875,
+      "ctx": "262K",
       "free": false,
       "limit": null
     },
@@ -2181,7 +2201,7 @@
       "input": 0.75,
       "output": 3.75,
       "cached": 0.75,
-      "ctx": "262K",
+      "ctx": "33K",
       "free": false,
       "limit": null
     },
@@ -2318,9 +2338,9 @@
     {
       "id": "~z-ai/glm-latest",
       "provider": "~Z Ai",
-      "input": 1.106,
-      "output": 3.476,
-      "cached": 0.1817,
+      "input": 1.15,
+      "output": 3.5,
+      "cached": 0.09999999999999999,
       "ctx": "1.3M",
       "free": false,
       "limit": null
@@ -2380,7 +2400,7 @@
       "provider": "Z Ai",
       "input": 1.4,
       "output": 4.4,
-      "cached": 0.26,
+      "cached": 0.14,
       "ctx": "1.3M",
       "free": false,
       "limit": null
@@ -2588,9 +2608,9 @@
     {
       "id": "~moonshotai/kimi-latest",
       "provider": "~Moonshotai",
-      "input": 2.5500000000000003,
-      "output": 12.75,
-      "cached": 0.25599998999999996,
+      "input": 2.5,
+      "output": 14,
+      "cached": 0.29,
       "ctx": "1.0M",
       "free": false,
       "limit": null
@@ -2652,6 +2672,16 @@
       "output": 1,
       "cached": 1,
       "ctx": "127K",
+      "free": false,
+      "limit": null
+    },
+    {
+      "id": "x-ai/grok-4.3:batch",
+      "provider": "X Ai",
+      "input": 1,
+      "output": 2,
+      "cached": 0.16,
+      "ctx": "1M",
       "free": false,
       "limit": null
     },
