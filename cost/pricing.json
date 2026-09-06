@@ -1,6 +1,6 @@
 {
   "_note": "本文件由 GitHub Actions 自动更新。页面只读取本地 pricing.json，不在用户访问时请求远端价格接口。数据源为 OpenRouter 公共 Models API，使用前仍建议核对官网。",
-  "updated": "2026-09-05",
+  "updated": "2026-09-06",
   "source": "OpenRouter Public Models API",
   "sourceUrl": "https://openrouter.ai/api/v1/models?sort=pricing-low-to-high",
   "count": 431,
@@ -526,6 +526,16 @@
       "limit": null
     },
     {
+      "id": "deepseek/deepseek-v4-flash",
+      "provider": "DeepSeek",
+      "input": 0.08162,
+      "output": 0.16324,
+      "cached": 0.016324,
+      "ctx": "1.0M",
+      "free": false,
+      "limit": null
+    },
+    {
       "id": "qwen/qwen3-coder-30b-a3b-instruct",
       "provider": "Qwen",
       "input": 0.07,
@@ -572,16 +582,6 @@
       "output": 0.25,
       "cached": 0.015,
       "ctx": "1.3M",
-      "free": false,
-      "limit": null
-    },
-    {
-      "id": "deepseek/deepseek-v4-flash",
-      "provider": "DeepSeek",
-      "input": 0.0861,
-      "output": 0.1722,
-      "cached": 0.017220000000000003,
-      "ctx": "1.0M",
       "free": false,
       "limit": null
     },
@@ -832,16 +832,6 @@
       "output": 0.41600000000000004,
       "cached": 0.10400000000000001,
       "ctx": "131K",
-      "free": false,
-      "limit": null
-    },
-    {
-      "id": "qwen/qwen3.5-35b-a3b",
-      "provider": "Qwen",
-      "input": 0.08,
-      "output": 0.75,
-      "cached": 0.08,
-      "ctx": "262K",
       "free": false,
       "limit": null
     },
@@ -1526,6 +1516,16 @@
       "limit": null
     },
     {
+      "id": "qwen/qwen3.5-35b-a3b",
+      "provider": "Qwen",
+      "input": 0.3125,
+      "output": 1.25,
+      "cached": 0.15625,
+      "ctx": "262K",
+      "free": false,
+      "limit": null
+    },
+    {
       "id": "meta-llama/llama-3.1-70b-instruct",
       "provider": "Meta Llama",
       "input": 0.39999999999999997,
@@ -2026,6 +2026,16 @@
       "limit": null
     },
     {
+      "id": "deepseek/deepseek-v4-pro",
+      "provider": "DeepSeek",
+      "input": 0.72819,
+      "output": 1.45638,
+      "cached": 0.0606825,
+      "ctx": "1.0M",
+      "free": false,
+      "limit": null
+    },
+    {
       "id": "deepseek/deepseek-r1-distill-llama-70b",
       "provider": "DeepSeek",
       "input": 0.7999999999999999,
@@ -2206,16 +2216,6 @@
       "limit": null
     },
     {
-      "id": "deepseek/deepseek-v4-pro",
-      "provider": "DeepSeek",
-      "input": 0.941166,
-      "output": 1.882332,
-      "cached": 0.0784305,
-      "ctx": "1.0M",
-      "free": false,
-      "limit": null
-    },
-    {
       "id": "qwen/qwen3-max",
       "provider": "Qwen",
       "input": 0.78,
@@ -2338,9 +2338,9 @@
     {
       "id": "~z-ai/glm-latest",
       "provider": "~Z Ai",
-      "input": 1.15,
-      "output": 3.5,
-      "cached": 0.09999999999999999,
+      "input": 1.17,
+      "output": 3.9600000000000004,
+      "cached": 0.234,
       "ctx": "1.3M",
       "free": false,
       "limit": null
