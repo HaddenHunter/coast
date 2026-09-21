@@ -1,6 +1,6 @@
 {
   "_note": "本文件由 GitHub Actions 自动更新。页面只读取本地 pricing.json，不在用户访问时请求远端价格接口。数据源为 OpenRouter 公共 Models API，使用前仍建议核对官网。",
-  "updated": "2026-09-20",
+  "updated": "2026-09-21",
   "source": "OpenRouter Public Models API",
   "sourceUrl": "https://openrouter.ai/api/v1/models?sort=pricing-low-to-high",
   "count": 446,
@@ -286,16 +286,6 @@
       "limit": null
     },
     {
-      "id": "deepseek/deepseek-v4-flash",
-      "provider": "DeepSeek",
-      "input": 0.036680000000000004,
-      "output": 0.07336000000000001,
-      "cached": 0.0073360000000000005,
-      "ctx": "1.0M",
-      "free": false,
-      "limit": null
-    },
-    {
       "id": "inference-net/schematron-v2-turbo",
       "provider": "Inference Net",
       "input": 0.03,
@@ -326,26 +316,6 @@
       "limit": null
     },
     {
-      "id": "~deepseek/deepseek-v4-flash-latest",
-      "provider": "~Deepseek",
-      "input": 0.04,
-      "output": 0.08,
-      "cached": 0.016,
-      "ctx": "1.3M",
-      "free": false,
-      "limit": null
-    },
-    {
-      "id": "deepseek/deepseek-v4-flash-0731",
-      "provider": "DeepSeek",
-      "input": 0.04,
-      "output": 0.08,
-      "cached": 0.016,
-      "ctx": "1.3M",
-      "free": false,
-      "limit": null
-    },
-    {
       "id": "amazon/nova-micro-v1",
       "provider": "Amazon",
       "input": 0.035,
@@ -372,6 +342,26 @@
       "output": 0.15,
       "cached": 0.004,
       "ctx": "260K",
+      "free": false,
+      "limit": null
+    },
+    {
+      "id": "~deepseek/deepseek-v4-flash-latest",
+      "provider": "~Deepseek",
+      "input": 0.04,
+      "output": 0.16,
+      "cached": 0.016,
+      "ctx": "1.3M",
+      "free": false,
+      "limit": null
+    },
+    {
+      "id": "deepseek/deepseek-v4-flash-0731",
+      "provider": "DeepSeek",
+      "input": 0.04,
+      "output": 0.16,
+      "cached": 0.016,
+      "ctx": "1.3M",
       "free": false,
       "limit": null
     },
@@ -526,16 +516,6 @@
       "limit": null
     },
     {
-      "id": "ibm-granite/granite-4.2-8b",
-      "provider": "Ibm Granite",
-      "input": 0.06,
-      "output": 0.25,
-      "cached": 0.015,
-      "ctx": "131K",
-      "free": false,
-      "limit": null
-    },
-    {
       "id": "nvidia/nemotron-3.5-lightning",
       "provider": "Nvidia",
       "input": 0.07,
@@ -656,6 +636,16 @@
       "limit": null
     },
     {
+      "id": "deepseek/deepseek-v4-flash",
+      "provider": "DeepSeek",
+      "input": 0.088606,
+      "output": 0.177212,
+      "cached": 0.017721200000000003,
+      "ctx": "1.0M",
+      "free": false,
+      "limit": null
+    },
+    {
       "id": "poolside/laguna-s-2.1",
       "provider": "Poolside",
       "input": 0.09,
@@ -692,6 +682,16 @@
       "output": 0.09999999999999999,
       "cached": 0.09999999999999999,
       "ctx": "16K",
+      "free": false,
+      "limit": null
+    },
+    {
+      "id": "ibm-granite/granite-4.2-8b",
+      "provider": "Ibm Granite",
+      "input": 0.09999999999999999,
+      "output": 0.15,
+      "cached": 0.049999999999999996,
+      "ctx": "131K",
       "free": false,
       "limit": null
     },
@@ -946,6 +946,16 @@
       "limit": null
     },
     {
+      "id": "~deepseek/deepseek-flash-latest",
+      "provider": "~Deepseek",
+      "input": 0.12,
+      "output": 0.48,
+      "cached": 0.0036,
+      "ctx": "1.0M",
+      "free": false,
+      "limit": null
+    },
+    {
       "id": "xiaomi/mimo-v2.5",
       "provider": "Xiaomi",
       "input": 0.14,
@@ -966,16 +976,6 @@
       "limit": null
     },
     {
-      "id": "~deepseek/deepseek-flash-latest",
-      "provider": "~Deepseek",
-      "input": 0.13,
-      "output": 0.52,
-      "cached": 0.0026000000000000003,
-      "ctx": "1.0M",
-      "free": false,
-      "limit": null
-    },
-    {
       "id": "qwen/qwen3-vl-30b-a3b-instruct",
       "provider": "Qwen",
       "input": 0.13,
@@ -991,16 +991,6 @@
       "input": 0.13199999999999998,
       "output": 0.5279999999999999,
       "cached": 0.032999999999999995,
-      "ctx": "262K",
-      "free": false,
-      "limit": null
-    },
-    {
-      "id": "qwen/qwen3.6-35b-a3b",
-      "provider": "Qwen",
-      "input": 0.09999999999999999,
-      "output": 0.8999999999999999,
-      "cached": 0.049999999999999996,
       "ctx": "262K",
       "free": false,
       "limit": null
@@ -1082,16 +1072,6 @@
       "output": 0.6,
       "cached": 0.15,
       "ctx": "128K",
-      "free": false,
-      "limit": null
-    },
-    {
-      "id": "deepseek/deepseek-v4.1-flash",
-      "provider": "DeepSeek",
-      "input": 0.15,
-      "output": 0.6,
-      "cached": 0.003,
-      "ctx": "1.0M",
       "free": false,
       "limit": null
     },
@@ -1206,12 +1186,12 @@
       "limit": null
     },
     {
-      "id": "meta-llama/llama-4-maverick",
-      "provider": "Meta Llama",
-      "input": 0.1875,
-      "output": 0.6525,
-      "cached": 0.1875,
-      "ctx": "1.0M",
+      "id": "qwen/qwen3.6-35b-a3b",
+      "provider": "Qwen",
+      "input": 0.15,
+      "output": 1,
+      "cached": 0.049999999999999996,
+      "ctx": "262K",
       "free": false,
       "limit": null
     },
@@ -1236,11 +1216,21 @@
       "limit": null
     },
     {
+      "id": "meta-llama/llama-4-maverick",
+      "provider": "Meta Llama",
+      "input": 0.19999999999999998,
+      "output": 0.7999999999999999,
+      "cached": 0.19999999999999998,
+      "ctx": "1.0M",
+      "free": false,
+      "limit": null
+    },
+    {
       "id": "deepseek/deepseek-v4-flash-vision-exp",
       "provider": "DeepSeek",
-      "input": 0.21559999999999999,
-      "output": 0.6468,
-      "cached": 0.00686,
+      "input": 0.22,
+      "output": 0.66,
+      "cached": 0.007,
       "ctx": "1.0M",
       "free": false,
       "limit": null
@@ -1556,6 +1546,16 @@
       "limit": null
     },
     {
+      "id": "deepseek/deepseek-v4.1-flash",
+      "provider": "DeepSeek",
+      "input": 0.3,
+      "output": 1.2,
+      "cached": 0.006,
+      "ctx": "1.0M",
+      "free": false,
+      "limit": null
+    },
+    {
       "id": "kwaipilot/kat-coder-pro-v2",
       "provider": "Kwaipilot",
       "input": 0.3,
@@ -1646,16 +1646,6 @@
       "limit": null
     },
     {
-      "id": "meta-llama/llama-3.1-70b-instruct",
-      "provider": "Meta Llama",
-      "input": 0.39999999999999997,
-      "output": 0.39999999999999997,
-      "cached": 0.39999999999999997,
-      "ctx": "131K",
-      "free": false,
-      "limit": null
-    },
-    {
       "id": "qwen/qwen3-30b-a3b-thinking-2507",
       "provider": "Qwen",
       "input": 0.19999999999999998,
@@ -1716,6 +1706,16 @@
       "limit": null
     },
     {
+      "id": "qwen/qwen3.8-27b",
+      "provider": "Qwen",
+      "input": 0.19999999999999998,
+      "output": 2.5,
+      "cached": 0.049999999999999996,
+      "ctx": "1M",
+      "free": false,
+      "limit": null
+    },
+    {
       "id": "qwen/qwen3-235b-a22b-thinking-2507",
       "provider": "Qwen",
       "input": 0.22999999999999998,
@@ -1772,16 +1772,6 @@
       "output": 2,
       "cached": 0.03,
       "ctx": "262K",
-      "free": false,
-      "limit": null
-    },
-    {
-      "id": "deepseek/deepseek-v4-pro",
-      "provider": "DeepSeek",
-      "input": 0.422298,
-      "output": 0.844596,
-      "cached": 0.0351915,
-      "ctx": "1.0M",
       "free": false,
       "limit": null
     },
@@ -1966,32 +1956,12 @@
       "limit": null
     },
     {
-      "id": "qwen/qwen3.8-27b",
-      "provider": "Qwen",
-      "input": 0.42,
-      "output": 3,
-      "cached": 0.08499999999999999,
-      "ctx": "1M",
-      "free": false,
-      "limit": null
-    },
-    {
       "id": "sao10k/l3.3-euryale-70b",
       "provider": "Sao10k",
       "input": 0.65,
       "output": 0.75,
       "cached": 0.65,
       "ctx": "131K",
-      "free": false,
-      "limit": null
-    },
-    {
-      "id": "~deepseek/deepseek-pro-latest",
-      "provider": "~Deepseek",
-      "input": 0.5715600000000001,
-      "output": 1.71468,
-      "cached": 0.019052,
-      "ctx": "1.0M",
       "free": false,
       "limit": null
     },
@@ -2032,6 +2002,16 @@
       "output": 1.7999999999999998,
       "cached": 0.11,
       "ctx": "66K",
+      "free": false,
+      "limit": null
+    },
+    {
+      "id": "meta-llama/llama-3.1-70b-instruct",
+      "provider": "Meta Llama",
+      "input": 0.72,
+      "output": 0.72,
+      "cached": 0.72,
+      "ctx": "131K",
       "free": false,
       "limit": null
     },
@@ -2141,16 +2121,6 @@
       "input": 0.6496,
       "output": 2.0416,
       "cached": 0.12064,
-      "ctx": "1.0M",
-      "free": false,
-      "limit": null
-    },
-    {
-      "id": "deepseek/deepseek-v4-pro-0813",
-      "provider": "DeepSeek",
-      "input": 0.66,
-      "output": 1.9800000000000002,
-      "cached": 0.022,
       "ctx": "1.0M",
       "free": false,
       "limit": null
@@ -2286,6 +2256,26 @@
       "limit": null
     },
     {
+      "id": "~deepseek/deepseek-pro-latest",
+      "provider": "~Deepseek",
+      "input": 0.7,
+      "output": 2.88,
+      "cached": 0.088,
+      "ctx": "1.0M",
+      "free": false,
+      "limit": null
+    },
+    {
+      "id": "~z-ai/glm-latest",
+      "provider": "~Z Ai",
+      "input": 0.7735,
+      "output": 2.431,
+      "cached": 0.127075,
+      "ctx": "1.3M",
+      "free": false,
+      "limit": null
+    },
+    {
       "id": "moonshotai/kimi-k2.7-code",
       "provider": "Moonshotai",
       "input": 0.7062,
@@ -2336,16 +2326,6 @@
       "limit": null
     },
     {
-      "id": "~z-ai/glm-latest",
-      "provider": "~Z Ai",
-      "input": 0.8442,
-      "output": 2.6532,
-      "cached": 0.15678,
-      "ctx": "1.3M",
-      "free": false,
-      "limit": null
-    },
-    {
       "id": "amazon/nova-pro-v1",
       "provider": "Amazon",
       "input": 0.7999999999999999,
@@ -2362,6 +2342,16 @@
       "output": 3.75,
       "cached": 0.75,
       "ctx": "262K",
+      "free": false,
+      "limit": null
+    },
+    {
+      "id": "deepseek/deepseek-v4-pro",
+      "provider": "DeepSeek",
+      "input": 0.9552599999999999,
+      "output": 1.9105199999999998,
+      "cached": 0.07960500000000001,
+      "ctx": "1.0M",
       "free": false,
       "limit": null
     },
@@ -2388,9 +2378,9 @@
     {
       "id": "z-ai/glm-5.3",
       "provider": "Z Ai",
-      "input": 0.896,
-      "output": 2.816,
-      "cached": 0.16640000000000002,
+      "input": 0.9099999999999999,
+      "output": 2.8600000000000003,
+      "cached": 0.16899999999999998,
       "ctx": "1.3M",
       "free": false,
       "limit": null
@@ -2512,6 +2502,16 @@
       "output": 2,
       "cached": 1.5,
       "ctx": "4K",
+      "free": false,
+      "limit": null
+    },
+    {
+      "id": "deepseek/deepseek-v4-pro-0813",
+      "provider": "DeepSeek",
+      "input": 1.32,
+      "output": 3.9600000000000004,
+      "cached": 0.044,
+      "ctx": "1.0M",
       "free": false,
       "limit": null
     },
