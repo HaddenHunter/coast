@@ -1,6 +1,6 @@
 {
   "_note": "本文件由 GitHub Actions 自动更新。页面只读取本地 pricing.json，不在用户访问时请求远端价格接口。数据源为 OpenRouter 公共 Models API，使用前仍建议核对官网。",
-  "updated": "2026-11-08",
+  "updated": "2026-11-09",
   "source": "OpenRouter Public Models API",
   "sourceUrl": "https://openrouter.ai/api/v1/models?sort=pricing-low-to-high",
   "count": 461,
@@ -162,6 +162,16 @@
       "output": 0.045,
       "cached": 0.003,
       "ctx": "262K",
+      "free": false,
+      "limit": null
+    },
+    {
+      "id": "meta-llama/llama-3.1-8b-instruct",
+      "provider": "Meta Llama",
+      "input": 0.02,
+      "output": 0.04,
+      "cached": 0.02,
+      "ctx": "131K",
       "free": false,
       "limit": null
     },
@@ -376,16 +386,6 @@
       "limit": null
     },
     {
-      "id": "meta-llama/llama-3.1-8b-instruct",
-      "provider": "Meta Llama",
-      "input": 0.049999999999999996,
-      "output": 0.08,
-      "cached": 0.024999999999999998,
-      "ctx": "131K",
-      "free": false,
-      "limit": null
-    },
-    {
       "id": "mistralai/mistral-small-24b-instruct-2501",
       "provider": "Mistral",
       "input": 0.049999999999999996,
@@ -596,16 +596,6 @@
       "limit": null
     },
     {
-      "id": "google/gemma-4-26b-a4b-it",
-      "provider": "Google",
-      "input": 0.0675,
-      "output": 0.22499999999999998,
-      "cached": 0.0375,
-      "ctx": "262K",
-      "free": false,
-      "limit": null
-    },
-    {
       "id": "nvidia/nemotron-3.5-lightning",
       "provider": "Nvidia",
       "input": 0.07,
@@ -806,16 +796,6 @@
       "limit": null
     },
     {
-      "id": "google/gemma-3-27b-it",
-      "provider": "Google",
-      "input": 0.08,
-      "output": 0.35,
-      "cached": 0.04,
-      "ctx": "131K",
-      "free": false,
-      "limit": null
-    },
-    {
       "id": "nvidia/nemotron-3-super-120b-a12b",
       "provider": "Nvidia",
       "input": 0.075,
@@ -832,6 +812,16 @@
       "output": 0.19999999999999998,
       "cached": 0.09999999999999999,
       "ctx": "128K",
+      "free": false,
+      "limit": null
+    },
+    {
+      "id": "google/gemma-4-26b-a4b-it",
+      "provider": "Google",
+      "input": 0.09,
+      "output": 0.3,
+      "cached": 0.049999999999999996,
+      "ctx": "262K",
       "free": false,
       "limit": null
     },
@@ -882,6 +872,16 @@
       "output": 0.19999999999999998,
       "cached": 0.09999999999999999,
       "ctx": "66K",
+      "free": false,
+      "limit": null
+    },
+    {
+      "id": "google/gemma-3-27b-it",
+      "provider": "Google",
+      "input": 0.08,
+      "output": 0.44999999999999996,
+      "cached": 0.04,
+      "ctx": "131K",
       "free": false,
       "limit": null
     },
@@ -1856,16 +1856,6 @@
       "limit": null
     },
     {
-      "id": "deepseek/deepseek-v4-pro",
-      "provider": "DeepSeek",
-      "input": 0.363138,
-      "output": 0.726276,
-      "cached": 0.030261500000000004,
-      "ctx": "1.0M",
-      "free": false,
-      "limit": null
-    },
-    {
       "id": "thedrummer/unslopnemo-12b",
       "provider": "Thedrummer",
       "input": 0.39999999999999997,
@@ -2036,26 +2026,6 @@
       "limit": null
     },
     {
-      "id": "z-ai/glm-5.2:batch",
-      "provider": "Z Ai",
-      "input": 0.37,
-      "output": 1.5,
-      "cached": 0.125,
-      "ctx": "1.0M",
-      "free": false,
-      "limit": null
-    },
-    {
-      "id": "z-ai/glm-5.3:batch",
-      "provider": "Z Ai",
-      "input": 0.37,
-      "output": 1.5,
-      "cached": 0.125,
-      "ctx": "1.0M",
-      "free": false,
-      "limit": null
-    },
-    {
       "id": "xiaomi/mimo-v2.6-pro",
       "provider": "Xiaomi",
       "input": 0.435,
@@ -2150,7 +2120,7 @@
       "provider": "DeepSeek",
       "input": 0.111,
       "output": 4.4399999999999995,
-      "cached": 0.101,
+      "cached": 0.09699999999999999,
       "ctx": "1.0M",
       "free": false,
       "limit": null
@@ -2296,6 +2266,16 @@
       "limit": null
     },
     {
+      "id": "z-ai/glm-5.3:batch",
+      "provider": "Z Ai",
+      "input": 0.44999999999999996,
+      "output": 2,
+      "cached": 0.09999999999999999,
+      "ctx": "1.0M",
+      "free": false,
+      "limit": null
+    },
+    {
       "id": "xiaomi/mimo-v2.5-pro",
       "provider": "Xiaomi",
       "input": 0.48,
@@ -2392,6 +2372,16 @@
       "output": 2.5,
       "cached": 0.024999999999999998,
       "ctx": "1.1M",
+      "free": false,
+      "limit": null
+    },
+    {
+      "id": "z-ai/glm-5.2:batch",
+      "provider": "Z Ai",
+      "input": 0.623,
+      "output": 1.271,
+      "cached": 0.21,
+      "ctx": "1.0M",
       "free": false,
       "limit": null
     },
@@ -2596,16 +2586,6 @@
       "limit": null
     },
     {
-      "id": "qwen/qwen3.5-397b-a17b",
-      "provider": "Qwen",
-      "input": 0.5,
-      "output": 3.5999999999999996,
-      "cached": 0.3,
-      "ctx": "262K",
-      "free": false,
-      "limit": null
-    },
-    {
       "id": "moonshotai/kimi-k2.5",
       "provider": "Moonshotai",
       "input": 0.532,
@@ -2706,6 +2686,16 @@
       "limit": null
     },
     {
+      "id": "qwen/qwen3.5-397b-a17b",
+      "provider": "Qwen",
+      "input": 0.6,
+      "output": 3.5999999999999996,
+      "cached": 0.12,
+      "ctx": "262K",
+      "free": false,
+      "limit": null
+    },
+    {
       "id": "relace/relace-apply-3",
       "provider": "Relace",
       "input": 0.85,
@@ -2752,16 +2742,6 @@
       "output": 1,
       "cached": 1,
       "ctx": "127K",
-      "free": false,
-      "limit": null
-    },
-    {
-      "id": "~moonshotai/kimi-latest",
-      "provider": "~Moonshotai",
-      "input": 0.18239999999999998,
-      "output": 9.338799999999999,
-      "cached": 0.18,
-      "ctx": "1.0M",
       "free": false,
       "limit": null
     },
@@ -2852,6 +2832,26 @@
       "output": 5,
       "cached": 0.0625,
       "ctx": "400K",
+      "free": false,
+      "limit": null
+    },
+    {
+      "id": "deepseek/deepseek-v4-pro",
+      "provider": "DeepSeek",
+      "input": 0.9552599999999999,
+      "output": 1.9105199999999998,
+      "cached": 0.07960500000000001,
+      "ctx": "1.0M",
+      "free": false,
+      "limit": null
+    },
+    {
+      "id": "~moonshotai/kimi-latest",
+      "provider": "~Moonshotai",
+      "input": 0.18239999999999998,
+      "output": 10.148900000000001,
+      "cached": 0.18,
+      "ctx": "1.0M",
       "free": false,
       "limit": null
     },
@@ -3156,6 +3156,16 @@
       "limit": null
     },
     {
+      "id": "moonshotai/kimi-k3:batch",
+      "provider": "Moonshotai",
+      "input": 0.9169999999999999,
+      "output": 6,
+      "cached": 0.226,
+      "ctx": "1.0M",
+      "free": false,
+      "limit": null
+    },
+    {
       "id": "openai/gpt-5.2:batch",
       "provider": "OpenAI",
       "input": 0.875,
@@ -3251,16 +3261,6 @@
       "input": 1.25,
       "output": 4.25,
       "cached": 0.15,
-      "ctx": "1.0M",
-      "free": false,
-      "limit": null
-    },
-    {
-      "id": "moonshotai/kimi-k3:batch",
-      "provider": "Moonshotai",
-      "input": 1.0839999999999999,
-      "output": 6,
-      "cached": 0.267,
       "ctx": "1.0M",
       "free": false,
       "limit": null
